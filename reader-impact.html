@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Measuring reader impact | Sara Elsharawy</title><meta name="description" content="A proposed plan for testing whether readers can find, understand, and act on portfolio and editorial content.">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css?v=topic-structure"><script src="theme.js"></script><script src="editorial-nav.js?v=2" defer></script></head>
+<body><a class="skip" href="#cohere-content">Skip to content</a><header><div class="wrap top">
+<a class="brand" href="index.html">Sara Elsharawy</a>
+<nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html" aria-current=page>Cohere Editorial</a></nav></div></header>
+<main id="main"><div class="wrap cohere-layout">
+<aside class="cohere-sidebar" aria-label="Cohere portfolio sidebar">
+<button type="button" class="cohere-nav-toggle" aria-expanded="false" aria-controls="cohere-side-nav" hidden>Cohere Editorial contents</button>
+<nav class="cohere-side-nav" id="cohere-side-nav" aria-label="Cohere portfolio">
+<a href="editorial.html">Cohere Editorial overview</a>
+<ul class="cohere-nav-topics"><li><a href="editorial.html#service-map">Service map</a></li>
+<li><a href="editorial.html#product-journey">Products and journey</a></li>
+<li><a href="editorial.html#reader-personas">Reader personas</a></li>
+<li><a href="editorial.html#content-strategy">Content strategy</a></li>
+<li><a href="editorial.html#cohere-samples">Sample directory</a></li></ul>
+<div class="cohere-nav-group"><p>Research</p><ul><li><a href="product-research.html">Product research</a></li>
+<li><a href="editorial-audit.html">Source audit</a></li>
+<li><a href="editorial-glossary.html">Glossary</a></li></ul></div>
+<div class="cohere-nav-group"><p>Editing</p><ul><li><a href="style-guide.html">Mini style guide</a></li>
+<li><a href="editorial-edit.html">Worked Rerank edit</a></li>
+<li><a href="editorial-peer-review.html">API migration peer review</a></li>
+<li><a href="edit.html">Annotated Compass edit</a></li></ul></div>
+<div class="cohere-nav-group"><p>Writing samples</p><ul><li><a href="rerank.html">Rerank developer guide</a></li>
+<li><a href="compass.html">Compass launch story</a></li>
+<li><a href="ada.html">Ada customer story</a></li>
+<li><a href="confidence.html">Model-confidence essay</a></li></ul></div>
+<div class="cohere-nav-group"><p>Strategy</p><ul><li><a href="strategy.html">Six-week content plan</a></li>
+<li><a href="editorial-strategy-exercise.html">Prioritization and measurement</a></li><li><a href="reader-impact.html" aria-current="page">Measuring reader impact</a></li></ul></div>
+</nav>
+</aside>
+<div class="cohere-main" id="cohere-content" tabindex="-1">
+<div class="subhero"><div class="wrap">
+<p class="eyebrow">Cohere Editorial · Proposed measurement plan</p>
+<h1>Measuring reader impact</h1>
+<p class="lede">Test whether people can find the right page, explain what it means, and do the thing it’s meant to help them do.</p>
+</div></div>
+<article class="wrap article">
+<p class="topic-type"><strong>Task topic</strong><span>Set up a reader-impact test and use the findings to decide what to revise.</span></p>
+<p>Start with one reader, one decision, and an observable definition of success. The measures below are proposed examples for this portfolio and a product editorial team.</p>
+
+<h2 id="tests">Choose a test for each topic type</h2>
+<p>Match the test to the reason someone opened the page. Give readers a realistic prompt and watch where they hesitate.</p>
+<div class="scroller" tabindex="0" role="region" aria-label="Reader-impact measures by topic type">
+<table><thead><tr><th scope="col">Topic type</th><th scope="col">Prompt to give the reader</th><th scope="col">What to measure</th></tr></thead>
+<tbody>
+<tr><th scope="row">Concept · Service map</th><td>A company wants staff to find answers to policy questions. Explain the two ways it could deliver that service and who would check access.</td><td><strong>Comprehension.</strong> Readers who can explain the two paths and one shared requirement in their own words, divided by readers who attempt the prompt.</td></tr>
+<tr><th scope="row">Reference · Glossary</th><td>From the portfolio overview, find the term that describes the match between a document and a search query. Explain what the score tells you.</td><td><strong>Findability.</strong> Readers who choose the right destination on their first click, divided by readers who start. Also record time to the correct entry and which wrong links they tried.</td></tr>
+<tr><th scope="row">Task · Rerank guide</th><td>Use the guide to plan a fair comparison and explain what you’d do when a result contains no qualifying passage.</td><td><strong>Task success.</strong> Readers who complete both parts without help, divided by readers who start. Record errors that could lead to a flawed comparison.</td></tr>
+</tbody></table></div>
+
+<h2>Run the test and decide what to change</h2>
+<ol>
+<li><strong>Record a baseline.</strong> Recruit readers who match the audience. Give them the same starting page, prompt, and success criteria. Score full, partial, and unsuccessful attempts. Report counts and denominators when the group is small.</li>
+<li><strong>Trace where the problem starts.</strong> If readers pick the wrong link, check the label and placement. If they find the page and explain a claim incorrectly, revise the opening or example. If they understand the page and still cannot finish, check for a missing prerequisite or a product blocker.</li>
+<li><strong>Revise and retest.</strong> Repeat the tasks with comparable readers. Compare success and time, and review any increase in consequential errors or support friction before broadening distribution.</li>
+</ol>
+
+<h2>Connect editorial performance to reader outcomes</h2>
+<p>Use behavioral signals to see whether a piece reaches people and where they go next. Pair those signals with tests or feedback that show whether the content helped.</p>
+<ul>
+<li><strong>Launch story.</strong> Track clicks on the next-step link and qualified registrations where available. Ask a few readers what the feature does and who can access it.</li>
+<li><strong>Customer story.</strong> Ask whether a prospective customer can identify the decision, evidence, and limits of the result. Track use by sales teams and qualified follow-up separately from attributed revenue.</li>
+<li><strong>Developer guide.</strong> Track completed evaluations among eligible workspaces, alongside blocked requests per 100 workspaces. A comparison group can help distinguish the guide’s effect from a product or access change.</li>
+</ul>
+<p><a href="editorial-strategy-exercise.html">See these measures used in a simulated editorial decision</a></p>
+
+<details class="topic-outline">
+<summary>Copy a measurement brief</summary>
+<p><strong>Reader and decision</strong> · <strong>Prompt</strong> · <strong>Success criteria</strong> · <strong>Baseline and time window</strong> · <strong>Data source and denominator</strong> · <strong>Guardrail</strong> · <strong>Owner and next decision</strong></p>
+</details>
+
+<h2>How I review documentation quality</h2>
+<p>I use IBM’s public documentation quality guidance to ask whether a page is easy to use, understand, and find. DITA’s topic types give me a way to make the purpose explicit.</p>
+<ul>
+<li><strong>Easy to use.</strong> State the reader’s goal, verify facts and examples, and include the conditions needed to complete the task.</li>
+<li><strong>Easy to understand.</strong> Start with the main point. Use consistent language and move supporting context, methods, or review notes into clearly labeled sections.</li>
+<li><strong>Easy to find.</strong> Use descriptive titles, headings, and links. Make the information type visible and give the reader a clear next step.</li>
+</ul>
+
+
+<section class="topic-takeaway" aria-labelledby="page-takeaway"><h2 id="page-takeaway">What to do next</h2><p>Use the results to decide which page to revise first.</p><p><a href="editorial.html">Return to Cohere Editorial</a></p></section>
+
+<section class="sources"><h2>Sources</h2><ul>
+<li><a href="https://www.ibm.com/docs/en/technical-content?topic=standards-content-quality">IBM documentation quality guidance</a></li>
+<li><a href="https://docs.oasis-open.org/dita/dita/v1.3/os/part2-tech-content/archSpec/technicalContent/dita-technicalContent-InformationTypes.html">OASIS DITA topic types</a></li>
+<li><a href="https://www.gov.uk/service-manual/measuring-success/usability-benchmarking-a-website-or-whole-service">GOV.UK guide to usability benchmarking</a></li>
+</ul></section></article></div></div></main><footer class="footer"><div class="wrap">
+<span>Sara Elsharawy · Product content design</span>
+<div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>
+<a href="themes.html">Theme options</a></div></div></footer></body></html>

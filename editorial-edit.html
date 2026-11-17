@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>One edit, from brief to handoff | Sara Elsharawy</title><meta name="description" content="A short Rerank 5 example that shows how I turn a launch claim into a useful developer decision.">
-<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css?v=cohere-navigation-2"><script src="theme.js"></script><script src="editorial-nav.js?v=2" defer></script></head>
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css?v=topic-structure"><script src="theme.js"></script><script src="editorial-nav.js?v=2" defer></script></head>
 <body><a class="skip" href="#cohere-content">Skip to content</a><header><div class="wrap top">
 <a class="brand" href="index.html">Sara Elsharawy</a>
-<nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html" aria-current=page>Editorial</a></nav></div></header>
+<nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html" aria-current=page>Cohere Editorial</a></nav></div></header>
 <main id="main"><div class="wrap cohere-layout">
 <aside class="cohere-sidebar" aria-label="Cohere portfolio sidebar">
-<button type="button" class="cohere-nav-toggle" aria-expanded="false" aria-controls="cohere-side-nav" hidden>Cohere portfolio contents</button>
+<button type="button" class="cohere-nav-toggle" aria-expanded="false" aria-controls="cohere-side-nav" hidden>Cohere Editorial contents</button>
 <nav class="cohere-side-nav" id="cohere-side-nav" aria-label="Cohere portfolio">
-<a href="editorial.html">Cohere portfolio overview</a>
+<a href="editorial.html">Cohere Editorial overview</a>
 <ul class="cohere-nav-topics"><li><a href="editorial.html#service-map">Service map</a></li>
 <li><a href="editorial.html#product-journey">Products and journey</a></li>
 <li><a href="editorial.html#reader-personas">Reader personas</a></li>
@@ -27,18 +27,21 @@
 <li><a href="ada.html">Ada customer story</a></li>
 <li><a href="confidence.html">Model-confidence essay</a></li></ul></div>
 <div class="cohere-nav-group"><p>Strategy</p><ul><li><a href="strategy.html">Six-week content plan</a></li>
-<li><a href="editorial-strategy-exercise.html">Prioritization and measurement</a></li></ul></div>
+<li><a href="editorial-strategy-exercise.html">Prioritization and measurement</a></li><li><a href="reader-impact.html">Measuring reader impact</a></li></ul></div>
 </nav>
 </aside>
 <div class="cohere-main" id="cohere-content" tabindex="-1"><div class="subhero"><div class="wrap">
 <p class="eyebrow">Cohere editorial case study</p>
 <h1>One edit, from brief to handoff</h1><p class="lede">A short Rerank 5 example that shows how I turn a launch claim into a useful developer decision.</p></div></div>
 <article class="wrap article">
+<p class="topic-type"><strong>Task topic</strong><span>Revise a product claim into guidance a developer can use.</span></p>
 <section class="cohere-context" aria-labelledby="cohere-page-context">
 <h2 id="cohere-page-context">The business question behind this edit</h2>
 <p>An AI tool that answers questions from company documents first has to find the right information. Cohere’s Rerank helps order search results. Its Context Focus option helps identify useful passages inside them. The edit shows what an engineering team would need to know before changing what it sends to its AI model.</p>
 <p><a href="editorial.html#cohere-basics">Start with the Cohere overview and journey map</a></p>
 </section>
+<section class="topic-steps"><h2>Steps at a glance</h2><ol><li>Name the choice the developer has to make.</li><li>Check the feature behavior, default, and edge case against the docs.</li><li>Revise the claim and record what needs technical review.</li></ol></section>
+
 <h2>Start with the editorial problem</h2>
 <p>The launch emphasizes the benefits of sending less irrelevant text downstream. The reader has to decide whether to change their pipeline. I’d structure the guide around what the feature returns, what happens without a qualifying span, and which measures tell the reader whether the change helped.</p>
 <div class="ed-edit-pair"><section><h3>Practice draft</h3><p>Context Focus automatically extracts the right passages and cuts token costs while keeping answer quality high. Turn it on to send only the best text to your model.</p></section>
@@ -49,6 +52,8 @@
 <p><a href="editorial-peer-review.html">See a longer simulated peer review and coaching note</a></p>
 <h2>Release handoff</h2>
 <p>After technical review, I’d verify terminology against the glossary, add links to the canonical docs and methodology, and brief the distribution copy. I’d check recurring reader questions after release and reopen the guide if the default, supported surface, or response fields change.</p>
+
+<section class="topic-takeaway" aria-labelledby="page-takeaway"><h2 id="page-takeaway">Ready for technical review</h2><p>The revision tells the reader what the feature returns, what can be missing, and what to compare. A technical reviewer still needs to run the example.</p><p><a href="rerank.html">Read the developer guide</a></p></section>
 </article></div></div></main><footer class="footer"><div class="wrap">
 <span>Sara Elsharawy · Product content design</span>
 <div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
