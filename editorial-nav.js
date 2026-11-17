@@ -2,21 +2,34 @@ const menuToggle = document.querySelector(".cohere-nav-toggle");
 const portfolioNav = document.querySelector("#cohere-side-nav");
 
 if (menuToggle && portfolioNav) {
-  const compact = window.matchMedia("(max-width: 900px)");
+  const compact = window.matchMedia("(max-width: 720px)");
+  const sidebar = menuToggle.closest(".cohere-sidebar");
+  const preference = "sara-cohere-navigation-open";
+
+  let isOpen = false;
+  try {
+    isOpen = sessionStorage.getItem(preference) === "true";
+  } catch {
+    // Navigation remains usable when browser storage is disabled.
+  }
+
+  function renderMenu() {
+    menuToggle.hidden = !compact.matches;
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    portfolioNav.hidden = compact.matches && !isOpen;
+  }
 
   function setMenu(open) {
-    menuToggle.setAttribute("aria-expanded", String(open));
-    portfolioNav.hidden = compact.matches && !open;
+    isOpen = open;
+    renderMenu();
+    try {
+      sessionStorage.setItem(preference, String(open));
+    } catch {
+      // The current page can still open and close the menu.
+    }
   }
 
-  function syncLayout() {
-    menuToggle.hidden = !compact.matches;
-    setMenu(false);
-  }
-
-  menuToggle.addEventListener("click", () => {
-    setMenu(menuToggle.getAttribute("aria-expanded") !== "true");
-  });
+  menuToggle.addEventListener("click", () => setMenu(!isOpen));
 
   portfolioNav.addEventListener("click", (event) => {
     const link = event.target.closest("a");
@@ -26,13 +39,13 @@ if (menuToggle && portfolioNav) {
     }
   });
 
-  document.querySelector(".cohere-sidebar").addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && compact.matches && !portfolioNav.hidden) {
+  sidebar.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && compact.matches && isOpen) {
       setMenu(false);
       menuToggle.focus();
     }
   });
 
-  compact.addEventListener("change", syncLayout);
-  syncLayout();
+  compact.addEventListener("change", renderMenu);
+  renderMenu();
 }

@@ -60,10 +60,11 @@
 .cohere-persona.developer .cohere-persona-icon{background:#e9eef8;color:#354c77}
 .cohere-persona.reviewer .cohere-persona-icon{background:#f2ebe2;color:#6a4931}
 .cohere-persona.employee .cohere-persona-icon{background:#f4e8ef;color:#754467}
-@media(max-width:900px){
+@media(max-width:720px){
   .cohere-layout{display:block}
   .cohere-sidebar{inset-block-start:0;z-index:3;margin:0;padding-block:.45rem;background:var(--paper)}
   .cohere-side-nav{max-height:68vh;max-height:68dvh;margin-top:.25rem}
+  .cohere-nav-toggle:not([hidden]) + .cohere-side-nav{position:absolute;inset:100% 0 auto;box-shadow:0 .4rem 1rem #17191822}
   .cohere-main [id]{scroll-margin-top:3.7rem}
 }
 @media(max-width:540px){.cohere-map-branches,.cohere-map-support{grid-template-columns:1fr}}
