@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Helping users run a valid detector test | Sara Elsharawy</title><meta name="description" content="A taxonomy and reusable language patterns for a playground where users try content safety detectors.">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
+<a class="brand" href="index.html">Sara Elsharawy</a>
+<nav aria-label="Main navigation"><a href="work.html" aria-current=page>Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html">Editorial</a></nav></div></header>
+<main id="main"><div class="subhero"><div class="wrap">
+<a class="back" href="work.html">Back to Selected work</a><p class="eyebrow">Case study · IBM watsonx.governance</p>
+<h1>Helping users run a valid detector test</h1><p class="lede">A taxonomy and reusable language patterns for a playground where users try content safety detectors.</p></div></div>
+<article class="wrap article">
+<h2>A definition is only the beginning</h2>
+<p>Users had to choose a detector, supply the right input, and interpret a result. Definitions varied, examples sat outside the task, and the terminology in the UI and docs sometimes diverged.</p>
+<p>I reviewed early builds, engineering specifications, schemas, and docs. I grouped detectors in the navigation, defined patterns for one- and two-input detectors, wrote examples and warnings, and aligned labels with backend fields and documentation.</p>
+<h2 id="architecture">Make the requirements visible before the test</h2>
+
+<figure class="work-diagram mint"><figcaption>Detector test flow</figcaption>
+<ol class="diagram-nodes"><li><strong>Choose a detector</strong><span>Use the taxonomy and short definitions to identify the right test.</span></li><li><strong>Add the required input</strong><span>Give each field a label and show an example of a valid test.</span></li><li><strong>Read the result</strong><span>Use the same terminology as the reference docs.</span></li></ol>
+
+</figure>
+<div class="sample-panel"><p class="byline">Illustrative content pattern</p><h3>What to show for each detector</h3><ol><li>Tell the user what the detector checks.</li><li>Name each required input beside its field.</li><li>Give one example that demonstrates a valid test.</li><li>Explain the result fields in the terms the reference docs use.</li><li>Warn users before a detector change clears entered test data, where that behavior applies.</li></ol></div>
+<p>I kept a shared terminology table in GitHub and iterated with design, engineering, and product managers. The rules gave the team a way to add detectors with consistent names, examples, and test states.</p>
+</article></main><footer class="footer"><div class="wrap">
+<span>Sara Elsharawy · Product content design</span>
+<div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>
+<a href="themes.html">Theme options</a></div></div></footer></body></html>

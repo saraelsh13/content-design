@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>When should you use Context Focus? | Sara Elsharawy</title><meta name="description" content="Use Rerank 5 to reorder candidate documents. Evaluate Context Focus when you also need to find the most relevant passages inside those documents.">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
+<a class="brand" href="index.html">Sara Elsharawy</a>
+<nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html" aria-current=page>Editorial</a></nav></div></header>
+<main id="main"><div class="subhero"><div class="wrap">
+<a class="back" href="editorial.html">Back to Editorial</a><p class="eyebrow">Developer explainer · Independent sample</p>
+<h1>When should you use Context Focus?</h1><p class="lede">Use Rerank 5 to reorder candidate documents. Evaluate Context Focus when you also need to find the most relevant passages inside those documents.</p></div></div>
+<article class="wrap article">
+<p>Suppose your application searches an employee handbook for the rules on carrying over leave. Your initial retriever finds the handbook, a benefits overview, and an older policy. A reranker can move the most relevant documents up the list. Context Focus adds a second piece of information. It can return character spans within a result that help your application find the passages to show or pass to a language model.</p>
+<h2>Run the same query two ways</h2>
+<p>Reuse the same candidate documents and model for both requests. This isolates the change you’re testing. The request body below uses fictional policy text and the fields in Cohere’s Rerank 5 release notes. Send it to <code>POST /v2/rerank</code> using your own authenticated client. For the baseline, omit <code>relevant_spans</code>. It is off by default.</p>
+<pre tabindex="0"><code>{
+  "model": "rerank-v5.0-pro",
+  "query": "How many days of annual leave can I carry over?",
+  "documents": [
+    "Employees may carry over up to five days of annual leave.",
+    "Submit annual leave requests in the employee portal."
+  ],
+  "top_n": 2,
+  "relevant_spans": { "mode": "enabled", "threshold": 0.3 }
+}</code></pre>
+<p>Where passages meet the threshold, the response can include their start and end character offsets and a relevance score. Inspect both the returned passage and its surrounding text. A sentence can be relevant on its own and still omit a date, exception, or eligibility condition that changes the answer. If your application receives no usable span, test a fallback that passes the full authorized document or expands the surrounding context.</p>
+<h2>Decide on evidence from your own corpus</h2>
+<div class="scroller" tabindex="0" role="region" aria-label="Evaluation plan"><table><thead><tr><th scope="col">Question</th><th scope="col">What to measure</th></tr></thead><tbody>
+<tr><td>Did we preserve the answer?</td><td>Have reviewers label the key passage and any exception. Score whether both survive in the context your application sends.</td></tr>
+<tr><td>Did we spend less?</td><td>Compare median and p95 retrieval latency, input tokens, and end-to-end task latency for full-document and span-based versions.</td></tr>
+<tr><td>Where should we use it?</td><td>Review short fact lookups separately from tasks that require multiple sections, tables, or qualifications.</td></tr>
+</tbody></table></div>
+<p>Use the same evaluation set to compare Pro and Fast after you’ve decided how to handle spans. The example threshold is a starting point from the release notes. Tune it against your own corpus and the cost of missing a necessary passage.</p>
+<p class="note">The request is adapted from public documentation. It was reviewed against the published example and was not executed against Cohere’s API.</p>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://docs.cohere.com/v2/changelog/rerank-v5">Rerank 5 release notes and Context Focus example</a></li><li><a href="https://docs.cohere.com/v2/changelog/embed-v5">Embed 5 release notes</a></li></ul></section></article></main><footer class="footer"><div class="wrap">
+<span>Sara Elsharawy · Product content design</span>
+<div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>
+<a href="themes.html">Theme options</a></div></div></footer></body></html>

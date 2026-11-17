@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What happens after I make the payment? | Sara Elsharawy</title><meta name="description" content="Making the rules for mortgage prepayments visible at the point where customers need them.">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
+<a class="brand" href="index.html">Sara Elsharawy</a>
+<nav aria-label="Main navigation"><a href="work.html" aria-current=page>Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html">Editorial</a></nav></div></header>
+<main id="main"><div class="subhero"><div class="wrap">
+<a class="back" href="work.html">Back to Selected work</a><p class="eyebrow">Case study · Manulife</p>
+<h1>What happens after I make the payment?</h1><p class="lede">Making the rules for mortgage prepayments visible at the point where customers need them.</p></div></div>
+<article class="wrap article">
+<h2>A small action with a lot behind it</h2>
+<p>From the customer’s side, it sounds simple. I want to put an extra payment toward my mortgage. The product has to account for eligibility, which account or subaccount receives the payment, the available prepayment limit, and when the payment is applied.</p>
+<p>I led content design for the flow. I mapped the decision tree, wrote component-level language, and worked with product, engineering, design, accessibility, and legal to align terms and states.</p>
+<h2 id="architecture">Map decisions and system states side by side</h2>
+
+<div class="architecture-pair">
+<figure class="work-diagram peach"><figcaption>Decision tree</figcaption>
+<ol class="diagram-nodes">
+<li><strong>Select the mortgage destination</strong><span>Show eligible accounts and subaccounts.</span></li>
+<li><strong>Enter a prepayment amount</strong><span>Check the amount against the available limit.</span></li>
+</ol>
+<div class="branches" role="group" aria-label="Outcomes of the prepayment limit check">
+<div><strong>Within the limit</strong><span>Continue to review and confirm the destination.</span></div>
+<div><strong>Outside the limit</strong><span>Show the available limit and let the customer revise.</span></div>
+</div></figure>
+<figure class="work-diagram blue"><figcaption>Content model</figcaption>
+<dl class="entity-model">
+<div><dt>Mortgage account</dt><dd>Can contain subaccounts. The prepayment privilege sets how much is available.</dd></div>
+<div><dt>Payment instruction</dt><dd>Records the destination, amount, and payment state.</dd></div>
+</dl>
+<p class="state-label">Payment states</p><ol class="state-list"><li>Draft</li><li>Submitted</li><li>Processing</li><li>Applied</li></ol>
+</figure>
+</div>
+<p class="note">Simplified reconstruction of the decision tree and content model from my portfolio.</p>
+<h2>Why the status mattered</h2>
+<p>A payment can be submitted before it is applied to the mortgage. That distinction shaped the confirmation copy and the reusable status language. It’s the kind of small wording decision that matters even more when the customer comes back later to check what happened.</p>
+</article></main><footer class="footer"><div class="wrap">
+<span>Sara Elsharawy · Product content design</span>
+<div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>
+<a href="themes.html">Theme options</a></div></div></footer></body></html>

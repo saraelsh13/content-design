@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A confidence score should help someone decide | Sara Elsharawy</title><meta name="description" content="A model can revise its confidence while it works. The person reading the answer still has to decide what to verify.">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
+<a class="brand" href="index.html">Sara Elsharawy</a>
+<nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html" aria-current=page>Editorial</a></nav></div></header>
+<main id="main"><div class="subhero"><div class="wrap">
+<a class="back" href="editorial.html">Back to Editorial</a><p class="eyebrow">Thought leadership · Independent byline sample</p>
+<h1>A confidence score should help someone decide</h1><p class="lede">A model can revise its confidence while it works. The person reading the answer still has to decide what to verify.</p></div></div>
+<article class="wrap article">
+<p>An analyst asks an AI assistant whether a policy changed between two versions. The assistant says yes and gives a confidence score. The analyst’s next question depends on the decision ahead. If she is sketching a summary for herself, she may want the section number. If she is briefing the team responsible for the policy, she may need to see both versions and the exact sentence that changed.</p>
+<p>The same score appears in both scenarios. The cost of getting the answer wrong, and the work required to check it, differ.</p>
+<h2>A model can be confident about two different things</h2>
+<p>Cohere Labs’ CALIBER work draws a distinction between a model’s estimate that it can solve a problem and its later estimate that the answer it produced is correct. As the model works, it may discover an assumption it hadn’t accounted for. The second estimate can reflect that new information.</p>
+<p>On BigMathDigits, Cohere reports that the 7B model’s expected calibration error fell from 0.059 for its strongest single-confidence baseline on that metric to 0.028 with CALIBER. Calibration asks how closely confidence matches observed accuracy across groups of answers. That result describes a particular comparison. The researchers identify whether these estimates can help a model decide when to verify an answer or abstain as a question for future work.</p>
+<h2>Give the reader a way to act</h2>
+<p>Imagine pairing the assistant’s answer with two highlighted passages, each linked to its policy version. The analyst can now check the claim directly. If the system has only found one version, the most useful thing it can surface is the missing version. That is information the analyst can act on even if the model’s confidence estimate is well calibrated.</p>
+<p>There is a test here for product teams. Give people the same mix of correct and incorrect answers under three conditions. Show a confidence score alone, show source evidence alone, or show both. Measure which claims they verify, which errors they catch, and how much time they spend. Use both a low-consequence task and one where a wrong answer affects a downstream decision. A score earns its place if it helps people spend their limited checking time where it matters.</p>
+<h2>Make verification part of the answer</h2>
+<p>Research on how models express uncertainty gives product teams a better signal to work with. Editorial and interface design determine what someone can do with that signal. When the answer matters, I’d like an AI assistant to give me a shorter route to the evidence.</p>
+<details><summary>Brief for an executive byline</summary><p><strong>Audience.</strong> Enterprise AI leaders and product teams. <strong>Argument.</strong> A usable confidence signal needs a verification path. <strong>Review.</strong> Ask the research author to verify the baseline, metric and interpretation. Ask the byline owner for a firsthand example and their perspective on the cost of verification. The analyst scenario and proposed experiment are illustrative.</p></details>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cohere.com/blog/rethinking-confidence-in-reasoning-models">Cohere Labs’ CALIBER research explainer</a></li></ul></section></article></main><footer class="footer"><div class="wrap">
+<span>Sara Elsharawy · Product content design</span>
+<div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>
+<a href="themes.html">Theme options</a></div></div></footer></body></html>

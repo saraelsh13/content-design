@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why Ada split its retrieval workloads | Sara Elsharawy</title><meta name="description" content="Ada found different answers to two questions. How quickly can an agent retrieve information during a call, and how efficiently can the team index a knowledge base?">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
+<a class="brand" href="index.html">Sara Elsharawy</a>
+<nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html" aria-current=page>Editorial</a></nav></div></header>
+<main id="main"><div class="subhero"><div class="wrap">
+<a class="back" href="editorial.html">Back to Editorial</a><p class="eyebrow">Customer story · Independent adaptation</p>
+<h1>Why Ada split its retrieval workloads</h1><p class="lede">Ada found different answers to two questions. How quickly can an agent retrieve information during a call, and how efficiently can the team index a knowledge base?</p></div></div>
+<article class="wrap article">
+<p>On a support call, a pause can feel like the line dropped. For Ada, which builds AI customer service agents, part of that silence can come from retrieval. The agent needs to find the customer’s policy, procedure, or product information before it can use it to answer.</p>
+<p>That gave Ada’s team a specific engineering problem. The system had to find relevant information and fit inside a voice workflow’s latency budget. In the background, the team also needed to turn large knowledge bases into searchable indexes. Each job made different demands on the same part of the system.</p>
+<h2>One evaluation, two deployment decisions</h2>
+<p>Cohere’s published case study describes Ada’s comparison of four approaches across 15,000 evaluation queries. The team evaluated online retrieval and offline indexing separately. It selected Cohere Embed hosted on dedicated Amazon SageMaker AI infrastructure for online retrieval. For offline bulk embedding, it chose Cohere Model Vault.</p>
+<p>Cohere reports a median retrieval latency of 77 milliseconds and top-10 recall of 90.7% for the SageMaker AI path. The case study also reports that Model Vault delivered about 2.7 times the throughput per dollar of Ada’s self-hosted setup for offline embedding. These figures belong to different workloads. One describes the speed and relevance of retrieval during a request. The other describes the economics of building the index.</p>
+<h2>What the team learned by splitting the work</h2>
+<p>A single deployment decision would have forced Ada to weigh the cost of bulk indexing against the speed of a live interaction. Evaluating the workloads separately let the team choose according to the job each system had to do. For another team facing the same choice, the starting point is to measure how much time a user waits during a live interaction and how much work the indexing system does away from that interaction.</p>
+<div class="callout"><p>This is an editorial adaptation of a published case study. The results are as reported by Cohere for Ada’s setup.</p></div>
+<details><summary>Interview and approval notes</summary><p>I’d ask Ada’s engineering lead for the scope and measurement window for the latency and recall figures, whether both offline setups processed the same batch and how infrastructure costs were counted, and one example of a decision the results changed. I’d request customer approval for the narrative, names and numbers, plus technical and legal review for performance claims before publication.</p></details>
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cohere.com/customer-stories/ada">Cohere’s published case study on Ada</a></li></ul></section></article></main><footer class="footer"><div class="wrap">
+<span>Sara Elsharawy · Product content design</span>
+<div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>
+<a href="themes.html">Theme options</a></div></div></footer></body></html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>One edit, from brief to handoff | Sara Elsharawy</title><meta name="description" content="A short Rerank 5 example that shows how I turn a launch claim into a useful developer decision.">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
+<a class="brand" href="index.html">Sara Elsharawy</a>
+<nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html" aria-current=page>Editorial</a></nav></div></header>
+<main id="main"><div class="subhero"><div class="wrap">
+<a class="back" href="editorial.html">Back to Editorial</a><p class="eyebrow">Cohere editorial case study</p>
+<h1>One edit, from brief to handoff</h1><p class="lede">A short Rerank 5 example that shows how I turn a launch claim into a useful developer decision.</p></div></div>
+<article class="wrap article"><nav class="ed-nav" aria-label="Cohere editorial case study">
+<a href="editorial.html">Process</a><a href="editorial-audit.html">Source audit</a>
+<a href="style-guide.html">Mini style guide</a><a href="editorial-glossary.html">Glossary</a>
+<a href="editorial-edit.html">Worked edit</a></nav>
+<h2>Start with the editorial problem</h2>
+<p>The launch emphasizes the benefits of sending less irrelevant text downstream. The reader has to decide whether to change their pipeline. I’d structure the guide around what the feature returns, what happens without a qualifying span, and which measures tell the reader whether the change helped.</p>
+<div class="ed-edit-pair"><section><h3>Practice draft</h3><p>Context Focus automatically extracts the right passages and cuts token costs while keeping answer quality high. Turn it on to send only the best text to your model.</p></section>
+<section><h3>Edited copy</h3><p>Enable Context Focus in a Rerank 5 request to get character offsets for passages that meet your threshold. If no passage qualifies, that result omits the span field. Decide whether your application should send more surrounding text, use the full document, or skip the result. Compare token use, retrieval latency, and whether both approaches preserve the details your answers need.</p></section></div>
+<p><strong>Note to the writer.</strong> The cost angle gives the piece a reason to exist. Lead with the decision a developer has to make, then move the missing-span behavior into the main example. Keep the savings claim conditional until we have a like-for-like comparison on the target corpus.</p>
+<h2>Claim ledger</h2>
+<div class="scroller" tabindex="0" role="region" aria-label="Worked claim ledger"><table><thead><tr><th scope="col">Claim / status</th><th scope="col">Source and scope</th><th scope="col">Next review</th></tr></thead><tbody><tr><td>Context Focus is opt-in. Public source supports this.</td><td><a href="https://docs.cohere.com/docs/rerank">Rerank docs</a> describe the setting and default.</td><td>DevRel checks the request and current API availability before publication.</td></tr><tr><td>A result can omit spans. Public source supports this.</td><td><a href="https://docs.cohere.com/docs/rerank">Rerank docs</a> describe omission when no passage meets the threshold.</td><td>Run a real test case and show the actual response shape. The example on this page is explanatory copy.</td></tr><tr><td>Token use can fall. Keep conditional.</td><td><a href="https://cohere.com/blog/rerank-5">Rerank 5 launch</a> motivates the benefit. Actual effect depends on selection, fallback, and downstream usage.</td><td>Measure token use, latency, and answer quality on the same candidate set. Hold any guarantee or number.</td></tr></tbody></table></div>
+<h2>Release handoff</h2>
+<p>After technical review, I’d verify terminology against the glossary, add links to the canonical docs and methodology, and brief the distribution copy. I’d check recurring reader questions after release and reopen the guide if the default, supported surface, or response fields change.</p>
+</article></main><footer class="footer"><div class="wrap">
+<span>Sara Elsharawy · Product content design</span>
+<div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>
+<a href="themes.html">Theme options</a></div></div></footer></body></html>
