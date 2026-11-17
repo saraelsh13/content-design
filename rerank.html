@@ -9,6 +9,11 @@
 <a class="back" href="editorial.html">Back to Editorial</a><p class="eyebrow">Developer explainer · Independent sample</p>
 <h1>When should you use Context Focus?</h1><p class="lede">Use Rerank 5 to reorder candidate documents. Evaluate Context Focus when you also need to find the most relevant passages inside those documents.</p></div></div>
 <article class="wrap article">
+<section class="cohere-context" aria-labelledby="cohere-page-context">
+<h2 id="cohere-page-context">Why teams might test this feature</h2>
+<p>A company’s search tool can return several relevant documents when an employee asks a question. Cohere’s Rerank puts the strongest matches first. Context Focus helps a team find useful passages inside those matches. This guide shows how to compare full documents with selected passages before changing a live workflow.</p>
+<p><a href="editorial.html#cohere-basics">Start with the Cohere overview and journey map</a></p>
+</section>
 <p>Suppose your application searches an employee handbook for the rules on carrying over leave. Your initial retriever finds the handbook, a benefits overview, and an older policy. A reranker can move the most relevant documents up the list. Context Focus adds a second piece of information. It can return character spans within a result that help your application find the passages to show or pass to a language model.</p>
 <h2>Run the same query two ways</h2>
 <p>Reuse the same candidate documents and model for both requests. This isolates the change you’re testing. The request body below uses fictional policy text and the fields in Cohere’s Rerank 5 release notes. Send it to <code>POST /v2/rerank</code> using your own authenticated client. For the baseline, omit <code>relevant_spans</code>. It is off by default.</p>

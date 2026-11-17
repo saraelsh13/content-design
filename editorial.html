@@ -1,14 +1,80 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>How I’d edit for Cohere | Sara Elsharawy</title><meta name="description" content="An editorial strategy case study based on Cohere’s public content.">
+<title>Cohere editorial portfolio | Sara Elsharawy</title><meta name="description" content="A plain-language guide to Cohere’s products, the people who use them, and my proposed content strategy.">
 <meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script></head>
 <body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
 <a class="brand" href="index.html">Sara Elsharawy</a>
 <nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html" aria-current=page>Editorial</a></nav></div></header>
 <main id="main">
 <div class="subhero"><div class="wrap"><p class="eyebrow">Editorial strategy case study · Sara Elsharawy</p>
-<h1>How I’d edit for Cohere</h1><p class="lede">When a product announcement promises better retrieval, I want to know what the reader will do differently on Monday. I worked backwards from Cohere’s public launch posts, docs, and research to show how I’d get from that question to a publishable piece.</p></div></div>
-<div class="wrap overview ed-overview"><nav class="ed-nav" aria-label="Cohere editorial case study">
+<h1>Cohere editorial portfolio</h1><p class="lede">What Cohere helps organizations do, who needs to understand it, and how I’d design content around their decisions.</p></div></div>
+<div class="wrap overview ed-overview">
+<section class="cohere-start" id="cohere-basics" aria-labelledby="cohere-basics-title">
+<h2 id="cohere-basics-title">What Cohere does</h2>
+<p>Cohere builds AI products for organizations. A company might use them to help employees find answers in its own documents, build an assistant into its software, or run AI models on dedicated infrastructure. An AI model is the software that performs a task such as ranking search results or drafting an answer.</p>
+<p>Take an operations team that keeps getting the same question about an internal policy. People need to find the right version, see the source, and know what to do next. Leaders want to know whether the tool saves time. The IT team needs to know what information it can access. Those are three different questions about the same experience.</p>
+<p class="note">An independent editorial portfolio. The journey and personas below are examples I use to explain my approach.</p>
+<nav class="ed-nav cohere-contents" aria-label="Cohere overview sections">
+<a href="#product-journey">Products and journey</a><a href="#reader-personas">Reader personas</a>
+<a href="#content-strategy">Content strategy</a><a href="#cohere-samples">Samples</a>
+</nav>
+</section>
+
+<section id="product-journey" aria-labelledby="product-journey-title">
+<h2 id="product-journey-title">How the products fit into the journey</h2>
+<p>A team can start with a workspace for employees or build search and AI into its own software. The choice depends on who will use it, where they work, and how much the organization needs to control.</p>
+<div class="cohere-product-map">
+<section><h3>Give employees a workspace</h3><p><a href="https://cohere.com/north">North</a> gives employees a place to ask questions and use assistants for recurring work. A team could pilot it with one policy library and a few common requests.</p></section>
+<section><h3>Build search into an existing tool</h3><p><a href="https://cohere.com/compass">Compass</a> helps find relevant material across company sources. Teams building their own search can also use <a href="https://docs.cohere.com/docs/models">Embed</a> to support search, <a href="https://docs.cohere.com/docs/rerank">Rerank</a> to reorder the results, and a Command model to draft an answer when the workflow calls for one.</p></section>
+</div>
+<p class="cohere-deploy"><strong>Decide how to run it.</strong> <a href="https://docs.cohere.com/docs/model-vault">Model Vault</a> is Cohere’s managed option for running supported models on dedicated infrastructure. The team would check its region, model choices, access, and data-handling requirements for the specific offering.</p>
+<figure class="cohere-journey">
+<figcaption>Example journey for an internal policy assistant</figcaption>
+<ol>
+<li><strong>Define the need</strong><span>Pick a policy task people struggle with.</span><small>Content · Use-case story</small></li>
+<li><strong>Choose a path</strong><span>Compare a workspace with building into an existing tool.</span><small>Content · Buyer’s guide</small></li>
+<li><strong>Pilot and verify</strong><span>Test common questions, permissions, and whether people can check the source.</span><small>Content · Pilot checklist</small></li>
+<li><strong>Roll out</strong><span>Help employees get started and give administrators a way to manage access.</span><small>Content · Onboarding and admin docs</small></li>
+<li><strong>Improve</strong><span>Review missed answers and recurring support questions. Fix the biggest blocker.</span><small>Content · Troubleshooting and updates</small></li>
+</ol>
+</figure>
+<figure class="cohere-journey cohere-task">
+<figcaption>What an employee experiences during the pilot</figcaption>
+<ol>
+<li><strong>Ask</strong><span>“What approval do I need for a new supplier?”</span></li>
+<li><strong>Find</strong><span>The tool searches sources the employee can access and prioritizes relevant material.</span></li>
+<li><strong>Check</strong><span>The employee opens the linked policy to confirm the limit, date, or exception.</span></li>
+<li><strong>Act</strong><span>The employee follows the policy or asks the policy owner if the evidence is unclear.</span></li>
+</ol>
+</figure>
+<p><a href="product-research.html">Read the product research and release timeline</a></p>
+</section>
+
+<section id="reader-personas" aria-labelledby="reader-personas-title">
+<h2 id="reader-personas-title">Who I design the content for</h2>
+<p>I use these as working personas, then validate them with customer interviews, sales and support questions, and search behavior. Several people may make decisions at the same stage, with different evidence needs.</p>
+<div class="cohere-personas">
+<section><h3>Business sponsor</h3><p><strong>Decision.</strong> Is this worth piloting, and how will we judge it?</p><p>I’d lead with a workflow, who benefits, and a credible customer result. Then I’d offer a pilot brief with an outcome the sponsor can track.</p></section>
+<section><h3>Knowledge or operations lead</h3><p><strong>Decision.</strong> Which team, documents, and tasks should we start with?</p><p>I’d give them a pilot checklist with prerequisites, representative questions, and ways to verify the results before rollout.</p></section>
+<section><h3>Developer or technical evaluator</h3><p><strong>Decision.</strong> Can I make this work with the systems and data I already have?</p><p>I’d give them a reproducible example, expected results, a fallback for edge cases, and links to the official technical details.</p></section>
+<section><h3>IT, security, or procurement reviewer</h3><p><strong>Decision.</strong> Can we use this within our requirements?</p><p>I’d make deployment, permissions, data handling, and availability easy to compare, with links to the relevant documentation and review owners.</p></section>
+<section><h3>Employee using the tool</h3><p><strong>Decision.</strong> Can I use this answer to do my job?</p><p>I’d write prompts and help content around common tasks, make the source easy to find, and explain what to try when the result is incomplete.</p></section>
+</div>
+</section>
+
+<section id="content-strategy" aria-labelledby="content-strategy-title">
+<h2 id="content-strategy-title">My content strategy for Cohere</h2>
+<p>Help the right person take the next step with enough evidence to act. I’d use one verified set of facts and change how I present them depending on who needs to make the decision.</p>
+<ol class="cohere-priorities">
+<li><strong>Make the business use concrete.</strong> Use launch stories and customer cases to show the work someone can do, who it serves, and which results the evidence supports.</li>
+<li><strong>Make evaluation practical.</strong> Give buyers a pilot plan and developers a way to run a comparison. I’d start with retrieval because the launch and the docs leave a concrete question about what to test and what to do when no passage qualifies.</li>
+<li><strong>Support rollout and continued use.</strong> Connect implementation docs, onboarding, permissions, and troubleshooting. Keep official names, availability, and reviewed claims consistent across those pages.</li>
+<li><strong>Measure what the reader can do next.</strong> Track qualified interest for launch content, evaluation completion for developer guides, and recurring blockers after rollout. Use that evidence to decide whether to revise the content, change how readers find it, or raise a product issue.</li>
+</ol>
+<p><a href="strategy.html">See the six-week plan</a> · <a href="editorial-strategy-exercise.html">See the measurement exercise</a></p>
+</section>
+
+<nav class="ed-nav" aria-label="Cohere editorial case study">
 <a href="editorial.html">Process</a><a href="editorial-audit.html">Source audit</a>
 <a href="style-guide.html">Mini style guide</a><a href="editorial-glossary.html">Glossary</a>
 <a href="editorial-edit.html">Worked edit</a></nav>
