@@ -38,3 +38,7 @@ h1,h2,h3{font-family:var(--display);font-weight:500;letter-spacing:-.047em}h1{fo
   .selected-work-grid>.visual-work-card{grid-column:span 2}
   .selected-work-grid>.visual-work-card:nth-child(n+4){grid-column:span 3}
 }
+
+.home-experience .visual-work-card:hover{box-shadow:none}
+.home-experience ul{margin:.65rem 0 0;padding-inline-start:1.15rem;font-size:.88rem}
+.home-experience li+li{margin-top:.25rem}
