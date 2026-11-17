@@ -19,7 +19,12 @@
 
 </figure>
 <div class="sample-panel"><p class="byline">Illustrative content pattern</p><h3>What to show for each detector</h3><ol><li>Tell the user what the detector checks.</li><li>Name each required input beside its field.</li><li>Give one example that demonstrates a valid test.</li><li>Explain the result fields in the terms the reference docs use.</li><li>Warn users before a detector change clears entered test data, where that behavior applies.</li></ol></div>
-<p>I kept a shared terminology table in GitHub and iterated with design, engineering, and product managers. The rules gave the team a way to add detectors with consistent names, examples, and test states.</p>
+<h2>Use the same rule in the interface, docs, and specification</h2>
+<p>Some detectors check one input. A faithfulness or groundedness check can require an answer and a source. That difference belongs beside the input fields, where a user can act on it. I defined example and field patterns for both cases, aligned result labels such as “Score” with the reference, and added a warning for actions that clear entered data.</p>
+<p>I kept a shared terminology and definition table in GitHub. I worked in weekly review cycles with Design, Engineering, and Product, wrote rationale and acceptance criteria in GitHub issues, and validated changes in a test environment.</p>
+<h2>What the team carried forward</h2>
+<p>Teams adopted the detector content patterns across multiple governance features. The shared definitions, naming rules, and example format also gave the team a starting point when adding detectors. Internal QA and support feedback indicated fewer invalid inputs and fewer requests for help with setup.</p>
+<p><a href="ibm-monitoring.html">See how I structured an agent monitoring dashboard</a></p>
 </article></main><footer class="footer"><div class="wrap">
 <span>Sara Elsharawy · Product content design</span>
 <div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>

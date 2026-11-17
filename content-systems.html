@@ -14,6 +14,20 @@
 <p>I developed the guide so teams could carry the same content decisions across banking journeys. I brought together terminology, voice and tone, accessibility, localization, and reusable guidance for interface states such as errors, confirmations, and status messages. I also established a decision log so research findings and exceptions could inform the next revision.</p>
 <div class="sample-panel"><p class="byline">Example from my working blueprint</p><h3>Match the message to what the service confirms</h3><p>A submission acknowledgement and a completed payment are different states. I modeled each message around its trigger, its component and slot, the localized wording, and the next action the customer can take.</p></div>
 <p>In a companion taxonomy and pilot scorecard, I modeled concepts, labels, journeys, patterns, and placements as separate records. I proposed measures such as critical-state coverage and whether customers can explain the outcome and next step. These were pilot measures, with results still to be collected.</p>
+<h2 id="pattern">From a style rule to a release check</h2>
+<p>The guide captured the language decisions. In the companion blueprint, I proposed a way to carry those decisions from design through implementation. Here’s how the pattern works for a payment confirmation.</p>
+<div class="scroller" tabindex="0" role="region" aria-label="Payment confirmation pattern and review checks">
+<table>
+<thead><tr><th scope="col">Part of the pattern</th><th scope="col">Decision recorded</th><th scope="col">Review check</th></tr></thead>
+<tbody>
+<tr><th scope="row">State and trigger</th><td>Give submission and completion different message records.</td><td>Engineering and QA check which service event triggers each message.</td></tr>
+<tr><th scope="row">Component and placement</th><td>Specify the title, supporting text, next action, and announcement behavior.</td><td>Design and accessibility reviewers check whether people can find and understand the update, including with assistive technology.</td></tr>
+<tr><th scope="row">Language variants</th><td>Keep the English and Canadian French variants linked to the same intent and terminology decision.</td><td>Localization checks that both versions describe the same state and next step.</td></tr>
+<tr><th scope="row">Ownership and review</th><td>Record the rationale, reviewer, and what would reopen the decision.</td><td>Recheck when the product behavior, terminology, or approval changes.</td></tr>
+</tbody>
+</table>
+</div>
+<p>I proposed piloting the pattern on a small set of critical states. I’d track which states have approved guidance, ask customers to explain what happened and what they would do next, and use those answers to decide where to revise the pattern.</p>
 <h2>Developing IBM guidance for model behavior</h2>
 <p>At IBM, I worked with researchers to develop ethical AI language guidance and terminology standards. Teams were describing similar model behavior in different ways across interfaces, documentation, and design systems. I helped turn those differences into guidance writers could apply to a specific action or output.</p>
 <div class="sample-panel"><p class="byline">Illustrative rule based on the portfolio</p><h3>Name what the system did</h3><p>When a system returns a match, name the result and its source. When it recommends a next step, make clear who decides whether to take it.</p></div>
