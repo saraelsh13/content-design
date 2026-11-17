@@ -30,3 +30,11 @@ h1,h2,h3{font-family:var(--display);font-weight:500;letter-spacing:-.047em}h1{fo
 .phd-card{display:grid;grid-template-columns:1fr auto;gap:1.25rem;align-items:end;padding:1.35rem 1.5rem;border:1px solid #ded5ee;border-radius:9px;background:var(--wash);margin:0 0 1.8rem}.phd-card .eyebrow{margin-bottom:.4rem}.overview .phd-card h2{font-size:clamp(1.65rem,3.5vw,2.55rem);margin:0 0 .5rem}.phd-card p:last-child{margin:0;color:var(--muted)}.timeline .current:before{box-shadow:0 0 0 4px var(--wash)}
 @media(max-width:760px){.visual-work{grid-template-columns:1fr}.process-steps,.artifact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.question-grid,.architecture-pair,.phd-card{grid-template-columns:1fr}.phd-card{align-items:start}.pdf-banner{grid-template-columns:1fr}.pdf-banner img{width:min(175px,100%)}.question-card{grid-template-columns:40px 1fr;gap:.65rem}.question-card img{width:40px;height:40px}.process-title{grid-template-columns:32px 1fr}.process-title>img{width:30px;height:30px}}
+
+/* Feature five projects in two balanced rows on wide screens. */
+.selection-intro{max-width:72ch;color:var(--muted)}
+@media(min-width:761px){
+  .selected-work-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .selected-work-grid>.visual-work-card{grid-column:span 2}
+  .selected-work-grid>.visual-work-card:nth-child(n+4){grid-column:span 3}
+}
