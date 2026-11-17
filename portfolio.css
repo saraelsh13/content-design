@@ -48,3 +48,19 @@ h1,h2,h3{font-family:var(--sans);font-weight:500;letter-spacing:-.047em}h1{font-
 .library-list{list-style:none;padding:0;margin:0}
 .workrow-title{font:500 clamp(1.05rem,2.1vw,1.5rem)/1.18 var(--sans)}
 .work-index .note{margin-top:1rem}
+
+.portfolio-questions{display:grid;grid-template-columns:minmax(13rem,.75fr) minmax(0,1.25fr);align-items:start;gap:1rem clamp(1.4rem,5vw,4rem)}
+.portfolio-questions-intro p{margin:.7rem 0 0;max-width:34ch;color:var(--muted)}
+.portfolio-question-list{border-block-start:1px solid var(--line)}
+.portfolio-question-list details{margin:0;padding:0;border-bottom:1px solid var(--line)}
+.portfolio-question-list summary{display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:44px;padding:.75rem .15rem;cursor:pointer;list-style:none;font-weight:650}
+.portfolio-question-list summary::-webkit-details-marker{display:none}
+.portfolio-question-list summary::after{content:"";width:.5rem;height:.5rem;flex:none;margin-inline-end:.25rem;border:solid var(--accent);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.portfolio-question-list details[open] summary::after{transform:rotate(225deg)}
+.portfolio-question-list summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:3px}
+.portfolio-answer{padding:0 .15rem .95rem;max-width:68ch}
+.portfolio-answer p{margin:0 0 .55rem}
+.portfolio-answer p:last-child{margin-bottom:0}
+.portfolio-answer ul{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:0;padding:0;list-style:none;font-size:.88rem}
+.portfolio-answer a{color:var(--accent);text-underline-offset:.18em}
+@media(max-width:700px){.portfolio-questions{grid-template-columns:1fr}}
