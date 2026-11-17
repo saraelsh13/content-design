@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Editing an API migration guide | Sara Elsharawy</title><meta name="description" content="The draft announces a better API. The reader needs to decide whether their integration is ready to move. Here’s how I’d work with the writer to close that gap.">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
+<a class="brand" href="index.html">Sara Elsharawy</a>
+<nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html" aria-current=page>Editorial</a></nav></div></header>
+<main id="main">
+<div class="subhero"><div class="wrap">
+<a class="back" href="editorial.html">Back to Editorial</a>
+<p class="eyebrow">Content Editor · Simulated peer review</p>
+<h1>Editing an API migration guide</h1><p class="lede">The draft announces a better API. The reader needs to decide whether their integration is ready to move. Here’s how I’d work with the writer to close that gap.</p>
+</div></div>
+<article class="wrap article">
+<p class="note">A fictional launch, draft, and review, inspired by my API migration and peer-review work at Marqeta and my release documentation at IBM.</p>
+
+<h2>The assignment</h2>
+<p>A writer is preparing a migration guide for a fictional payments API. The audience already has a live integration and needs to estimate the work, test it, and decide when to switch. Product Marketing wants to explain why the API is changing. Engineering needs readers to account for a different event schema.</p>
+<p>For this exercise, the product brief says the new API has a test environment and uses a different status and event schema. Existing customers need to update how they read those fields. The brief gives us no confirmed retirement date, performance data, or instructions for reversing a switch.</p>
+
+<h2>My first note to the writer</h2>
+<blockquote><p>Keep the idea of one place to start. It’s a good promise for this guide. Give it to the reader as a checklist: what changes in their integration, how they can check it, and what still needs a decision before they switch. The release rationale can follow. On your next pass, try writing the headings as questions a developer would ask at each step. Let’s review those together before we polish the sentences.</p></blockquote>
+<p>I’d ask the writer to revise the rest of the draft using the sample below. In the next review, we’d read the headings by themselves, then walk a developer through the guide and watch where they have to ask for more information.</p>
+
+<h2>Before and after</h2>
+<div class="ed-edit-pair">
+<section><h3>Simulated first draft</h3>
+<p>Our new unified API makes payments faster and easier. Migration is seamless: update your endpoint, test your integration, and go live when you’re ready. The new status experience makes it simple to track payments.</p>
+</section>
+<section><h3>Sample revision for the writer</h3>
+<p>Before you switch to the unified payments API, check how your integration reads payment statuses and events. The new API sends these in a different format. If your code uses them to update a payment record, review those mappings first.</p>
+<p>In the test environment, send a payment request and follow it through each outcome your integration handles. Compare the API response and any events with the status your application shows. Resolve discrepancies before scheduling the switch.</p>
+</section>
+</div>
+<p>I moved the event-schema change ahead of the setup steps because it affects the effort to migrate. I replaced the promise of a smooth migration with a test a developer can use. Benefits go back in when we can explain what changed and support the claim.</p>
+
+<h2>Decisions before publication</h2>
+<div class="scroller" tabindex="0" role="region" aria-label="Review decisions and evidence">
+<table><thead><tr><th scope="col">Decision</th><th scope="col">Evidence and reviewer</th></tr></thead>
+<tbody>
+<tr><th scope="row">Publish the changed status and event guidance</th><td>Engineering checks the mappings and walks through the test cases with DevRel. Add links to the versioned API reference.</td></tr>
+<tr><th scope="row">Hold speed and retirement claims</th><td>Product Marketing supplies a comparable benchmark for any performance claim. Product and the appropriate reviewers confirm lifecycle dates and wording before publication.</td></tr>
+<tr><th scope="row">Keep rollout guidance out of the sample revision</th><td>Engineering confirms supported rollout and recovery options. The writer links to the verified procedure once it exists.</td></tr>
+</tbody></table></div>
+
+<h2>Hand it back with a definition of done</h2>
+<p>A developer can identify which code to inspect, demonstrate that the test flow handles the outcomes they depend on, and find the authoritative rollout guidance. The writer owns the next draft. I’d review the revised opening, verify the claims against the approved sources, then check that the release note and guide use the same terms.</p>
+<p><a href="marqeta.html">See my Marqeta API migration work</a> · <a href="editorial-edit.html">See my Cohere Rerank edit and claim ledger</a></p>
+</article></main><footer class="footer"><div class="wrap">
+<span>Sara Elsharawy · Product content design</span>
+<div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>
+<a href="themes.html">Theme options</a></div></div></footer></body></html>
