@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Content intake and templates | Sara Elsharawy</title><meta name="description" content="How I turn stakeholder requests, product rules, and technical constraints into content teams can review, localize, and maintain.">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
+<a class="brand" href="index.html">Sara Elsharawy</a>
+<nav aria-label="Main navigation"><a href="work.html" aria-current=page>Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html">Editorial</a></nav></div></header>
+<main id="main">
+<div class="subhero"><div class="wrap">
+<a class="back" href="work.html">Back to Selected work</a><p class="eyebrow">Content operations · Process and templates</p>
+<h1>Content intake and templates</h1>
+<p class="lede">A request for “confirmation copy” gives me a place to start. I want to know what the person needs to confirm, what the system can verify, and who owns the decision if those two things don’t line up.</p>
+</div></div>
+<article class="wrap article">
+<p>I set up intake so stakeholders can bring business rules, technical information, and user evidence into the same conversation. I use what I learn to define the need, draft against actual product states, and give the team one place to review the copy and the decisions behind it.</p>
+<figure class="work-diagram blue">
+<figcaption>From request to release and review</figcaption>
+<ol class="diagram-nodes">
+<li><strong>Discover</strong><span>Gather pain points, customer evidence, product rules, and how the system behaves. Record open questions and who can answer them.</span></li>
+<li><strong>Define</strong><span>Write the user need. Agree on scope, priority, and what the person must be able to understand or do.</span></li>
+<li><strong>Develop</strong><span>Map states and copy types, prototype alternatives, and gather feedback in the shared record. Log decisions as they happen.</span></li>
+<li><strong>Deliver</strong><span>Route the draft for the reviews it needs, hand off context for translation, and check the implemented copy. Revisit it when evidence or rules change.</span></li>
+</ol>
+</figure>
+
+<h2 id="intake-form">The intake form</h2>
+<p>I use a short first pass to understand the request. If it affects money, account access, or another consequential action, I work through the rules and edge cases with the people who own them.</p>
+<div class="scroller" tabindex="0" role="region" aria-label="Stakeholder content intake template">
+<table>
+<thead><tr><th scope="col">Field</th><th scope="col">What I ask stakeholders to provide</th></tr></thead>
+<tbody>
+<tr><th scope="row">User need and pain point</th><td>Who is affected? What are they trying to do, where do they get stuck, and what evidence do we have?</td></tr>
+<tr><th scope="row">Scope and priority</th><td>Journey, channel, audience, regions or locales, release timing, and the impact of leaving the issue open.</td></tr>
+<tr><th scope="row">Rules and system behaviour</th><td>Eligibility, limits, exceptions, data sources, state transitions, and what triggers each message. Link the relevant policy or technical spec.</td></tr>
+<tr><th scope="row">Decisions and dependencies</th><td>What has been confirmed? What is still open? Who can confirm each rule, and which choices affect design, engineering, or another team?</td></tr>
+<tr><th scope="row">Review and delivery</th><td>Content owner, reviewers, required sign-offs, affected locales, and links to the design and delivery ticket.</td></tr>
+<tr><th scope="row">Acceptance criteria</th><td>What should someone understand or be able to do, and how will we check it? Agree on a signal to watch after release.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="source-of-truth">A shared source of truth</h2>
+<p>I give stakeholders a link to the same working record. It connects the draft to the evidence, business rules, mockups, and technical specs. Each copy entry carries its ID, component or channel, state or trigger, copy type, and current wording. Reviewers can see which version they’re reviewing and leave feedback beside the relevant entry.</p>
+<p>I use the decision log to keep what we agreed findable after the comments are resolved. I record the decision, its rationale, the evidence, who confirmed it, the affected copy IDs, and the event or review date that would reopen it.</p>
+<div class="sample-panel">
+<p class="byline">Illustrative intake and decision log entry</p>
+<h3>When has an extra payment actually gone through?</h3>
+<dl class="entity-model">
+<div><dt>Need</dt><dd>I need to know if my extra payment has been applied so I can decide whether to check later or take action.</dd></div>
+<div><dt>Decision</dt><dd>Use one message when the request is received and another when the payment is applied. Each message follows its own confirmed event.</dd></div>
+<div><dt>Evidence and owner</dt><dd>Link the state model. Ask the product owner and engineering to confirm the events, and record the decision against the two copy IDs.</dd></div>
+<div><dt>Acceptance and follow-up</dt><dd>In testing, ask people what happened and what they would do next. Reopen the decision if processing rules change or support keeps hearing the same question.</dd></div>
+</dl>
+</div>
+
+<h2 id="copy-legend">Copy legend for design and handoff</h2>
+<p>I label each entry by its job. Designers, engineers, reviewers, and translators can refer to the same copy ID and tell what kind of review it needs.</p>
+<div class="scroller" tabindex="0" role="region" aria-label="Copy type legend">
+<table>
+<thead><tr><th scope="col">Key</th><th scope="col">Copy type</th><th scope="col">What to document</th></tr></thead>
+<tbody>
+<tr><th scope="row">UI</th><td>Heading, field label, navigation, action</td><td>Component, placement, and the action a person can take.</td></tr>
+<tr><th scope="row">HELP</th><td>Helper text, instructions, example, empty state</td><td>The question it answers and when people need it.</td></tr>
+<tr><th scope="row">ERR</th><td>Validation and recovery</td><td>What went wrong, the affected field or action, and a recovery step where available.</td></tr>
+<tr><th scope="row">STATE</th><td>Progress, confirmation, success, warning</td><td>The verified trigger, what the state means, and whether a next action is available.</td></tr>
+<tr><th scope="row">A11Y</th><td>Accessible name, description, or announcement</td><td>How the text relates to the visible label and when it should be announced.</td></tr>
+<tr><th scope="row">LEGAL</th><td>Disclosure, consent, or required wording</td><td>Source, applicable market, version, and who reviews changes.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="review">Review, translation, and maintenance</h2>
+<ul>
+<li><strong>Assign each review a job.</strong> Product and engineering confirm rules and triggers. Content and design check comprehension and placement. Route claims and disclosures to Legal and Compliance where required. Record what was approved and which version it applies to.</li>
+<li><strong>Send translators the context.</strong> Include the copy ID, intended meaning, screen or component, locale, approved terms, and sample values for placeholders. Check the translation in context, including text fit and differences in formats or market rules.</li>
+<li><strong>Check what people actually encounter.</strong> Test errors, accessible names, and relevant status announcements in the build. Confirm the copy matches the system state and the reviewed version. Give recurring support questions, QA findings, or a product change a route back to the content owner.</li>
+</ul>
+
+<section class="sources" aria-labelledby="intake-sources">
+<h2 id="intake-sources">References for the templates</h2>
+<ul>
+<li><a href="https://www.designcouncil.org.uk/resources/the-double-diamond/">Design Council’s Double Diamond</a></li>
+<li><a href="https://service-manual.ons.gov.uk/content/writing-for-users/user-needs">ONS guidance on user needs and acceptance criteria</a></li>
+<li><a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2 for accessible controls, errors, and status messages</a></li>
+<li><a href="https://learn.microsoft.com/en-us/globalization/internationalization/contextual-metadata">Microsoft’s guidance on giving translators context</a></li>
+<li><a href="https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/plan-manage-content/manage-existing-govuk-content/">GOV.UK guidance on content maintenance and review</a></li>
+</ul>
+</section>
+</article></main><footer class="footer"><div class="wrap">
+<span>Sara Elsharawy · Product content design</span>
+<div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>
+<a href="themes.html">Theme options</a></div></div></footer></body></html>
