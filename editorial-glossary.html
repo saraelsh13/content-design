@@ -1,27 +1,49 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>A glossary across channels | Sara Elsharawy</title><meta name="description" content="I compare how a term is sold, how readers talk about the underlying problem, and what the technical source can support.">
-<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script></head>
-<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script><script src="editorial-nav.js" defer></script></head>
+<body><a class="skip" href="#cohere-content">Skip to content</a><header><div class="wrap top">
 <a class="brand" href="index.html">Sara Elsharawy</a>
 <nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html" aria-current=page>Editorial</a></nav></div></header>
-<main id="main"><div class="subhero"><div class="wrap">
-<a class="back" href="editorial.html">Back to Editorial</a><p class="eyebrow">Cohere editorial case study</p>
+<main id="main"><div class="wrap cohere-layout">
+<aside class="cohere-sidebar" aria-label="Cohere portfolio sidebar">
+<button type="button" class="cohere-nav-toggle" aria-expanded="false" aria-controls="cohere-side-nav" hidden>Cohere portfolio contents</button>
+<nav class="cohere-side-nav" id="cohere-side-nav" aria-label="Cohere portfolio">
+<a href="editorial.html">Cohere portfolio overview</a>
+<ul class="cohere-nav-topics"><li><a href="editorial.html#service-map">Service map</a></li>
+<li><a href="editorial.html#product-journey">Products and journey</a></li>
+<li><a href="editorial.html#reader-personas">Reader personas</a></li>
+<li><a href="editorial.html#content-strategy">Content strategy</a></li>
+<li><a href="editorial.html#cohere-samples">Sample directory</a></li></ul>
+<div class="cohere-nav-group"><p>Research</p><ul><li><a href="product-research.html">Product research</a></li>
+<li><a href="editorial-audit.html">Source audit</a></li>
+<li><a href="editorial-glossary.html" aria-current="page">Glossary</a></li></ul></div>
+<div class="cohere-nav-group"><p>Editing</p><ul><li><a href="style-guide.html">Mini style guide</a></li>
+<li><a href="editorial-edit.html">Worked Rerank edit</a></li>
+<li><a href="editorial-peer-review.html">API migration peer review</a></li>
+<li><a href="edit.html">Annotated Compass edit</a></li></ul></div>
+<div class="cohere-nav-group"><p>Writing samples</p><ul><li><a href="rerank.html">Rerank developer guide</a></li>
+<li><a href="compass.html">Compass launch story</a></li>
+<li><a href="ada.html">Ada customer story</a></li>
+<li><a href="confidence.html">Model-confidence essay</a></li></ul></div>
+<div class="cohere-nav-group"><p>Strategy</p><ul><li><a href="strategy.html">Six-week content plan</a></li>
+<li><a href="editorial-strategy-exercise.html">Prioritization and measurement</a></li></ul></div>
+</nav>
+</aside>
+<div class="cohere-main" id="cohere-content" tabindex="-1"><div class="subhero"><div class="wrap">
+<p class="eyebrow">Cohere editorial case study</p>
 <h1>A glossary across channels</h1><p class="lede">I compare how a term is sold, how readers talk about the underlying problem, and what the technical source can support.</p></div></div>
 <article class="wrap article">
 <section class="cohere-context" aria-labelledby="cohere-page-context">
 <h2 id="cohere-page-context">Why the same term can mean different things</h2>
 <p>A buyer may ask whether an AI tool keeps company data private. An engineer may ask exactly where the data is processed and when it is encrypted. This glossary shows how I’d connect everyday questions, product language, and precise definitions.</p>
 <p><a href="editorial.html#cohere-basics">Start with the Cohere overview and journey map</a></p>
-</section><nav class="ed-nav" aria-label="Cohere editorial case study">
-<a href="editorial.html">Process</a><a href="editorial-audit.html">Source audit</a>
-<a href="style-guide.html">Mini style guide</a><a href="editorial-glossary.html">Glossary</a>
-<a href="editorial-edit.html">Worked edit</a></nav>
+</section>
 <p>Public discussion is a source of questions, not a source of technical truth. The labels below say where I found a signal and where the question is my own hypothesis. The terms and definitions reflect the sources as reviewed on November 16, 2026.</p>
 <div class="scroller" tabindex="0" role="region" aria-label="Marketing, audience, technical and editorial vocabulary comparison"><table><thead><tr><th scope="col">Term</th><th scope="col">Marketing framing</th><th scope="col">Audience language or signal</th><th scope="col">Technical meaning</th><th scope="col">Editorial choice</th></tr></thead><tbody><tr><td>Context Focus</td><td><a href="https://cohere.com/blog/rerank-5">Cohere launch</a> leads with relevant context and fewer tokens.</td><td>Open question to validate: when is a passage enough, and what do I send downstream if there’s no usable span? The benchmark discussion does not establish this specific concern.</td><td><a href="https://docs.cohere.com/docs/rerank">Rerank docs</a> describe an opt-in feature. It can return character offsets and scores for qualifying passages. A result can omit spans.</td><td>First mention: “Context Focus returns relevant passages from ranked documents when enabled.” Describe the output and fallback before making a savings claim.</td></tr><tr><td>Pro / Fast</td><td><a href="https://cohere.com/blog/rerank-5">Cohere launch</a> positions Pro for quality and Fast for latency- and cost-sensitive workloads.</td><td><a href="https://www.reddit.com/r/LLMDevs/comments/1xattho/we_tested_jev_as_a_reranker_against_voyage_cohere/">Practitioner comparison</a> names model versions and the candidate-set cap. The thread illustrates how practitioners frame comparisons.</td><td><a href="https://docs.cohere.com/docs/rerank">Rerank docs</a> lists <code>rerank-v5.0-pro</code> and <code>rerank-v5.0-fast</code> as separate model IDs with differing workloads.</td><td>Use the approved tier names. Suggest an evaluation on the reader’s corpus and latency budget. Scope results to the tested models and workload.</td></tr><tr><td>Calibrated relevance score</td><td><a href="https://cohere.com/blog/rerank-5">Cohere launch</a> frames it as a way to choose a consistent relevance threshold.</td><td>Open question to validate: can I use this score to tell whether my generated answer is true?</td><td><a href="https://docs.cohere.com/docs/rerank">Rerank docs</a> describe calibrated relevance scores for the reranking task. Reranking orders candidates by relevance to the query.</td><td>Keep “relevance score.” Explain what the score rates. Use a separate term for answer correctness or model confidence.</td></tr><tr><td>Sovereign inference / data residency</td><td><a href="https://cohere.com/blog/open-source-model-vault">Model Vault launch</a> frames model choice and jurisdiction as operational controls.</td><td><a href="https://www.reddit.com/r/planhub/comments/1wojezy/canadian_infrastructure_canadian_security_data/">Public discussion on sovereign AI</a> raises the question of whether hosting location alone explains sovereignty. Category-level signal.</td><td><a href="https://docs.cohere.com/v2/docs/model-vault/regions">Model Vault regions</a> documents regional serving choices and offering-specific availability. Residency is one named control.</td><td>Name the selected region and the specific controls. Avoid inferring a compliance conclusion from geography alone.</td></tr><tr><td>Confidential computing</td><td><a href="https://cohere.com/blog/open-source-model-vault">Model Vault launch</a> describes enhanced protection in Model Vault Encrypted.</td><td><a href="https://www.reddit.com/r/LocalLLaMA/comments/1r2i26b/is_anyone_actually_running_models_in_secure/">Enclave discussion</a> asks when using an enclave makes sense. This is a category discussion.</td><td><a href="https://docs.cohere.com/docs/model-vault/encrypted">Encrypted Vault docs</a> distinguish confidential computing and end-to-end encryption in the Encrypted offering.</td><td>Name the exact offering and explain which data and phase are protected. Check the current availability and route security claims for review.</td></tr><tr><td>Initial / final confidence</td><td><a href="https://cohere.com/blog/rethinking-confidence-in-reasoning-models">CALIBER research explainer</a> frames separate estimates as a way to understand how an answer develops.</td><td>Open question to validate: what should a reader do differently when a model supplies these two estimates?</td><td>In the described research, initial confidence estimates whether the model can solve a problem. Final confidence estimates whether the answer it produced is correct.</td><td>Define each estimate in sequence. Attribute the finding and its limits. Treat proposed interface uses as hypotheses.</td></tr></tbody></table></div>
 <h2>How I’d maintain this</h2>
 <p>I’d keep a record per term with a canonical definition, approved first mention, alternatives by channel, technical owner, and review trigger. I’d also keep the source for the audience wording. Whenever we use a different word for the same thing, I’d record the reason or reconcile it with the owner.</p>
-</article></main><footer class="footer"><div class="wrap">
+</article></div></div></main><footer class="footer"><div class="wrap">
 <span>Sara Elsharawy · Product content design</span>
 <div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
 <a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>

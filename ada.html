@@ -1,12 +1,37 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Why Ada split its retrieval workloads | Sara Elsharawy</title><meta name="description" content="Ada found different answers to two questions. How quickly can an agent retrieve information during a call, and how efficiently can the team index a knowledge base?">
-<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script></head>
-<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script><script src="editorial-nav.js" defer></script></head>
+<body><a class="skip" href="#cohere-content">Skip to content</a><header><div class="wrap top">
 <a class="brand" href="index.html">Sara Elsharawy</a>
 <nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html" aria-current=page>Editorial</a></nav></div></header>
-<main id="main"><div class="subhero"><div class="wrap">
-<a class="back" href="editorial.html">Back to Editorial</a><p class="eyebrow">Customer story · Independent adaptation</p>
+<main id="main"><div class="wrap cohere-layout">
+<aside class="cohere-sidebar" aria-label="Cohere portfolio sidebar">
+<button type="button" class="cohere-nav-toggle" aria-expanded="false" aria-controls="cohere-side-nav" hidden>Cohere portfolio contents</button>
+<nav class="cohere-side-nav" id="cohere-side-nav" aria-label="Cohere portfolio">
+<a href="editorial.html">Cohere portfolio overview</a>
+<ul class="cohere-nav-topics"><li><a href="editorial.html#service-map">Service map</a></li>
+<li><a href="editorial.html#product-journey">Products and journey</a></li>
+<li><a href="editorial.html#reader-personas">Reader personas</a></li>
+<li><a href="editorial.html#content-strategy">Content strategy</a></li>
+<li><a href="editorial.html#cohere-samples">Sample directory</a></li></ul>
+<div class="cohere-nav-group"><p>Research</p><ul><li><a href="product-research.html">Product research</a></li>
+<li><a href="editorial-audit.html">Source audit</a></li>
+<li><a href="editorial-glossary.html">Glossary</a></li></ul></div>
+<div class="cohere-nav-group"><p>Editing</p><ul><li><a href="style-guide.html">Mini style guide</a></li>
+<li><a href="editorial-edit.html">Worked Rerank edit</a></li>
+<li><a href="editorial-peer-review.html">API migration peer review</a></li>
+<li><a href="edit.html">Annotated Compass edit</a></li></ul></div>
+<div class="cohere-nav-group"><p>Writing samples</p><ul><li><a href="rerank.html">Rerank developer guide</a></li>
+<li><a href="compass.html">Compass launch story</a></li>
+<li><a href="ada.html" aria-current="page">Ada customer story</a></li>
+<li><a href="confidence.html">Model-confidence essay</a></li></ul></div>
+<div class="cohere-nav-group"><p>Strategy</p><ul><li><a href="strategy.html">Six-week content plan</a></li>
+<li><a href="editorial-strategy-exercise.html">Prioritization and measurement</a></li></ul></div>
+</nav>
+</aside>
+<div class="cohere-main" id="cohere-content" tabindex="-1"><div class="subhero"><div class="wrap">
+<p class="eyebrow">Customer story · Independent adaptation</p>
 <h1>Why Ada split its retrieval workloads</h1><p class="lede">Ada found different answers to two questions. How quickly can an agent retrieve information during a call, and how efficiently can the team index a knowledge base?</p></div></div>
 <article class="wrap article">
 <section class="cohere-context" aria-labelledby="cohere-page-context">
@@ -23,7 +48,7 @@
 <p>A single deployment decision would have forced Ada to weigh the cost of bulk indexing against the speed of a live interaction. Evaluating the workloads separately let the team choose according to the job each system had to do. For another team facing the same choice, the starting point is to measure how much time a user waits during a live interaction and how much work the indexing system does away from that interaction.</p>
 <div class="callout"><p>This is an editorial adaptation of a published case study. The results are as reported by Cohere for Ada’s setup.</p></div>
 <details><summary>Interview and approval notes</summary><p>I’d ask Ada’s engineering lead for the scope and measurement window for the latency and recall figures, whether both offline setups processed the same batch and how infrastructure costs were counted, and one example of a decision the results changed. I’d request customer approval for the narrative, names and numbers, plus technical and legal review for performance claims before publication.</p></details>
-<section class="sources"><h2>Sources</h2><ul><li><a href="https://cohere.com/customer-stories/ada">Cohere’s published case study on Ada</a></li></ul></section></article></main><footer class="footer"><div class="wrap">
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://cohere.com/customer-stories/ada">Cohere’s published case study on Ada</a></li></ul></section></article></div></div></main><footer class="footer"><div class="wrap">
 <span>Sara Elsharawy · Product content design</span>
 <div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
 <a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>

@@ -1,33 +1,66 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Cohere editorial portfolio | Sara Elsharawy</title><meta name="description" content="A plain-language guide to Cohere’s products, the people who use them, and my proposed content strategy.">
-<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script></head>
-<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script><script src="editorial-nav.js" defer></script></head>
+<body><a class="skip" href="#cohere-content">Skip to content</a><header><div class="wrap top">
 <a class="brand" href="index.html">Sara Elsharawy</a>
 <nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html" aria-current=page>Editorial</a></nav></div></header>
-<main id="main">
+<main id="main"><div class="wrap cohere-layout">
+<aside class="cohere-sidebar" aria-label="Cohere portfolio sidebar">
+<button type="button" class="cohere-nav-toggle" aria-expanded="false" aria-controls="cohere-side-nav" hidden>Cohere portfolio contents</button>
+<nav class="cohere-side-nav" id="cohere-side-nav" aria-label="Cohere portfolio">
+<a href="editorial.html" aria-current="page">Cohere portfolio overview</a>
+<ul class="cohere-nav-topics"><li><a href="editorial.html#service-map">Service map</a></li>
+<li><a href="editorial.html#product-journey">Products and journey</a></li>
+<li><a href="editorial.html#reader-personas">Reader personas</a></li>
+<li><a href="editorial.html#content-strategy">Content strategy</a></li>
+<li><a href="editorial.html#cohere-samples">Sample directory</a></li></ul>
+<div class="cohere-nav-group"><p>Research</p><ul><li><a href="product-research.html">Product research</a></li>
+<li><a href="editorial-audit.html">Source audit</a></li>
+<li><a href="editorial-glossary.html">Glossary</a></li></ul></div>
+<div class="cohere-nav-group"><p>Editing</p><ul><li><a href="style-guide.html">Mini style guide</a></li>
+<li><a href="editorial-edit.html">Worked Rerank edit</a></li>
+<li><a href="editorial-peer-review.html">API migration peer review</a></li>
+<li><a href="edit.html">Annotated Compass edit</a></li></ul></div>
+<div class="cohere-nav-group"><p>Writing samples</p><ul><li><a href="rerank.html">Rerank developer guide</a></li>
+<li><a href="compass.html">Compass launch story</a></li>
+<li><a href="ada.html">Ada customer story</a></li>
+<li><a href="confidence.html">Model-confidence essay</a></li></ul></div>
+<div class="cohere-nav-group"><p>Strategy</p><ul><li><a href="strategy.html">Six-week content plan</a></li>
+<li><a href="editorial-strategy-exercise.html">Prioritization and measurement</a></li></ul></div>
+</nav>
+</aside>
+<div class="cohere-main" id="cohere-content" tabindex="-1">
 <div class="subhero"><div class="wrap"><p class="eyebrow">Editorial strategy case study · Sara Elsharawy</p>
 <h1>Cohere editorial portfolio</h1><p class="lede">What Cohere helps organizations do, who needs to understand it, and how I’d design content around their decisions.</p></div></div>
 <div class="wrap overview ed-overview">
+<section class="cohere-service" id="service-map" aria-labelledby="service-map-title">
+<h2 id="service-map-title">Service map</h2>
+<figure class="cohere-service-figure">
+<figcaption>How a company could help employees find and verify an internal policy</figcaption>
+<div class="cohere-map-card cohere-map-start"><span aria-hidden="true" class="cohere-map-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span><div><strong>Start with a business need</strong><p>Employees lose time finding the right policy and deciding what to do next.</p></div></div>
+<div class="cohere-map-branches" role="group" aria-label="Two ways to deliver the service">
+<div class="cohere-map-card"><span aria-hidden="true" class="cohere-map-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect x="3.5" y="5" width="17" height="13" rx="2"/><path d="M3.5 9h17M8 13h3m2 0h3"/></svg></span><div><strong>Give employees an AI workspace</strong><p><a href="https://cohere.com/north">North</a> gives staff a place to ask questions and use assistants for recurring work.</p></div></div>
+<div class="cohere-map-card"><span aria-hidden="true" class="cohere-map-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="10.5" cy="10.5" r="5.5"/><path d="m15 15 4.5 4.5"/></svg></span><div><strong>Build into an existing tool</strong><p><a href="https://cohere.com/compass">Compass</a> helps teams search company information. Developers can also use <a href="https://docs.cohere.com/docs/models">Embed</a> to support search, <a href="https://docs.cohere.com/docs/rerank">Rerank</a> to order results, and Command to draft an answer.</p></div></div>
+</div>
+<div class="cohere-map-support">
+<div class="cohere-map-card"><span aria-hidden="true" class="cohere-map-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect x="4" y="4" width="16" height="6" rx="1.3"/><rect x="4" y="14" width="16" height="6" rx="1.3"/><path d="M7 7h.1M7 17h.1"/></svg></span><div><strong>Set up the service</strong><p>Confirm permissions, source access, and deployment requirements. <a href="https://docs.cohere.com/docs/model-vault">Model Vault</a> is an option for running supported models on dedicated infrastructure.</p></div></div>
+<div class="cohere-map-card"><span aria-hidden="true" class="cohere-map-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="m8 12 3 3 5-6"/></svg></span><div><strong>Check the result and act</strong><p>An employee finds the policy, checks the original, and takes the next step. The service team uses pilot feedback to improve the experience.</p></div></div>
+</div>
+</figure>
+</section>
+
+
 <section class="cohere-start" id="cohere-basics" aria-labelledby="cohere-basics-title">
 <h2 id="cohere-basics-title">What Cohere does</h2>
 <p>Cohere builds AI products for organizations. A company might use them to help employees find answers in its own documents, build an assistant into its software, or run AI models on dedicated infrastructure. An AI model is the software that performs a task such as ranking search results or drafting an answer.</p>
 <p>Take an operations team that keeps getting the same question about an internal policy. People need to find the right version, see the source, and know what to do next. Leaders want to know whether the tool saves time. The IT team needs to know what information it can access. Those are three different questions about the same experience.</p>
 <p class="note">An independent editorial portfolio. The journey and personas below are examples I use to explain my approach.</p>
-<nav class="ed-nav cohere-contents" aria-label="Cohere overview sections">
-<a href="#product-journey">Products and journey</a><a href="#reader-personas">Reader personas</a>
-<a href="#content-strategy">Content strategy</a><a href="#cohere-samples">Samples</a>
-</nav>
 </section>
 
 <section id="product-journey" aria-labelledby="product-journey-title">
 <h2 id="product-journey-title">How the products fit into the journey</h2>
-<p>A team can start with a workspace for employees or build search and AI into its own software. The choice depends on who will use it, where they work, and how much the organization needs to control.</p>
-<div class="cohere-product-map">
-<section><h3>Give employees a workspace</h3><p><a href="https://cohere.com/north">North</a> gives employees a place to ask questions and use assistants for recurring work. A team could pilot it with one policy library and a few common requests.</p></section>
-<section><h3>Build search into an existing tool</h3><p><a href="https://cohere.com/compass">Compass</a> helps find relevant material across company sources. Teams building their own search can also use <a href="https://docs.cohere.com/docs/models">Embed</a> to support search, <a href="https://docs.cohere.com/docs/rerank">Rerank</a> to reorder the results, and a Command model to draft an answer when the workflow calls for one.</p></section>
-</div>
-<p class="cohere-deploy"><strong>Decide how to run it.</strong> <a href="https://docs.cohere.com/docs/model-vault">Model Vault</a> is Cohere’s managed option for running supported models on dedicated infrastructure. The team would check its region, model choices, access, and data-handling requirements for the specific offering.</p>
+<p>The service map shows where the products fit. This journey shows what customers and employees need at each step, and the content I’d design to help.</p>
 <figure class="cohere-journey">
 <figcaption>Example journey for an internal policy assistant</figcaption>
 <ol>
@@ -54,11 +87,11 @@
 <h2 id="reader-personas-title">Who I design the content for</h2>
 <p>I use these as working personas, then validate them with customer interviews, sales and support questions, and search behavior. Several people may make decisions at the same stage, with different evidence needs.</p>
 <div class="cohere-personas">
-<section><h3>Business sponsor</h3><p><strong>Decision.</strong> Is this worth piloting, and how will we judge it?</p><p>I’d lead with a workflow, who benefits, and a credible customer result. Then I’d offer a pilot brief with an outcome the sponsor can track.</p></section>
-<section><h3>Knowledge or operations lead</h3><p><strong>Decision.</strong> Which team, documents, and tasks should we start with?</p><p>I’d give them a pilot checklist with prerequisites, representative questions, and ways to verify the results before rollout.</p></section>
-<section><h3>Developer or technical evaluator</h3><p><strong>Decision.</strong> Can I make this work with the systems and data I already have?</p><p>I’d give them a reproducible example, expected results, a fallback for edge cases, and links to the official technical details.</p></section>
-<section><h3>IT, security, or procurement reviewer</h3><p><strong>Decision.</strong> Can we use this within our requirements?</p><p>I’d make deployment, permissions, data handling, and availability easy to compare, with links to the relevant documentation and review owners.</p></section>
-<section><h3>Employee using the tool</h3><p><strong>Decision.</strong> Can I use this answer to do my job?</p><p>I’d write prompts and help content around common tasks, make the source easy to find, and explain what to try when the result is incomplete.</p></section>
+<section class="cohere-persona sponsor"><h3><span aria-hidden="true" class="cohere-persona-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span><span>Business sponsor</span></h3><p><strong>Decision.</strong> Is this worth piloting, and how will we judge it?</p><p>I’d lead with a workflow, who benefits, and a credible customer result. Then I’d offer a pilot brief with an outcome the sponsor can track.</p></section>
+<section class="cohere-persona lead"><h3><span aria-hidden="true" class="cohere-persona-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect x="5" y="4" width="14" height="16" rx="2"/><path d="M9 4V2.8h6V4M8.5 10h7M8.5 14h7"/></svg></span><span>Knowledge or operations lead</span></h3><p><strong>Decision.</strong> Which team, documents, and tasks should we start with?</p><p>I’d give them a pilot checklist with prerequisites, representative questions, and ways to verify the results before rollout.</p></section>
+<section class="cohere-persona developer"><h3><span aria-hidden="true" class="cohere-persona-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-12-2 14"/></svg></span><span>Developer or technical evaluator</span></h3><p><strong>Decision.</strong> Can I make this work with the systems and data I already have?</p><p>I’d give them a reproducible example, expected results, a fallback for edge cases, and links to the official technical details.</p></section>
+<section class="cohere-persona reviewer"><h3><span aria-hidden="true" class="cohere-persona-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M12 21c4-2 7-5.5 7-9V6l-7-3-7 3v6c0 3.5 3 7 7 9Z"/><path d="m9 12 2 2 4-4"/></svg></span><span>IT, security, or procurement reviewer</span></h3><p><strong>Decision.</strong> Can we use this within our requirements?</p><p>I’d make deployment, permissions, data handling, and availability easy to compare, with links to the relevant documentation and review owners.</p></section>
+<section class="cohere-persona employee"><h3><span aria-hidden="true" class="cohere-persona-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="8" r="3"/><path d="M5.5 20v-2a6.5 6.5 0 0 1 13 0v2"/></svg></span><span>Employee using the tool</span></h3><p><strong>Decision.</strong> Can I use this answer to do my job?</p><p>I’d write prompts and help content around common tasks, make the source easy to find, and explain what to try when the result is incomplete.</p></section>
 </div>
 </section>
 
@@ -74,10 +107,7 @@
 <p><a href="strategy.html">See the six-week plan</a> · <a href="editorial-strategy-exercise.html">See the measurement exercise</a></p>
 </section>
 
-<nav class="ed-nav" aria-label="Cohere editorial case study">
-<a href="editorial.html">Process</a><a href="editorial-audit.html">Source audit</a>
-<a href="style-guide.html">Mini style guide</a><a href="editorial-glossary.html">Glossary</a>
-<a href="editorial-edit.html">Worked edit</a></nav>
+
 <section id="cohere-samples" aria-labelledby="cohere-samples-title">
 <h2 id="cohere-samples-title">Editorial and strategy samples</h2>
 <div class="ed-links">
@@ -125,7 +155,7 @@
 
 <section id="why"><h2>Why I follow Cohere</h2>
 <p>When I worked on drift metrics at IBM, I kept coming back to the question a reader might ask. What does it mean when this number moves? Cohere Labs’ work on reasoning confidence caught my attention for the same reason. An estimate can help, and there’s still a person who has to decide what to check next.</p>
-<p class="byline">Independent case study using public information, reviewed November 16, 2026.</p></section></div></main><footer class="footer"><div class="wrap">
+<p class="byline">Independent case study using public information, reviewed November 16, 2026.</p></section></div></div></div></main><footer class="footer"><div class="wrap">
 <span>Sara Elsharawy · Product content design</span>
 <div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
 <a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>

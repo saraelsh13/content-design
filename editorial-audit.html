@@ -1,22 +1,44 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Source audit and planning brief | Sara Elsharawy</title><meta name="description" content="I read across channels to see how a product claim changes as readers go from understanding it to testing it.">
-<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script></head>
-<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css"><script src="theme.js"></script><script src="editorial-nav.js" defer></script></head>
+<body><a class="skip" href="#cohere-content">Skip to content</a><header><div class="wrap top">
 <a class="brand" href="index.html">Sara Elsharawy</a>
 <nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html" aria-current=page>Editorial</a></nav></div></header>
-<main id="main"><div class="subhero"><div class="wrap">
-<a class="back" href="editorial.html">Back to Editorial</a><p class="eyebrow">Cohere editorial case study</p>
+<main id="main"><div class="wrap cohere-layout">
+<aside class="cohere-sidebar" aria-label="Cohere portfolio sidebar">
+<button type="button" class="cohere-nav-toggle" aria-expanded="false" aria-controls="cohere-side-nav" hidden>Cohere portfolio contents</button>
+<nav class="cohere-side-nav" id="cohere-side-nav" aria-label="Cohere portfolio">
+<a href="editorial.html">Cohere portfolio overview</a>
+<ul class="cohere-nav-topics"><li><a href="editorial.html#service-map">Service map</a></li>
+<li><a href="editorial.html#product-journey">Products and journey</a></li>
+<li><a href="editorial.html#reader-personas">Reader personas</a></li>
+<li><a href="editorial.html#content-strategy">Content strategy</a></li>
+<li><a href="editorial.html#cohere-samples">Sample directory</a></li></ul>
+<div class="cohere-nav-group"><p>Research</p><ul><li><a href="product-research.html">Product research</a></li>
+<li><a href="editorial-audit.html" aria-current="page">Source audit</a></li>
+<li><a href="editorial-glossary.html">Glossary</a></li></ul></div>
+<div class="cohere-nav-group"><p>Editing</p><ul><li><a href="style-guide.html">Mini style guide</a></li>
+<li><a href="editorial-edit.html">Worked Rerank edit</a></li>
+<li><a href="editorial-peer-review.html">API migration peer review</a></li>
+<li><a href="edit.html">Annotated Compass edit</a></li></ul></div>
+<div class="cohere-nav-group"><p>Writing samples</p><ul><li><a href="rerank.html">Rerank developer guide</a></li>
+<li><a href="compass.html">Compass launch story</a></li>
+<li><a href="ada.html">Ada customer story</a></li>
+<li><a href="confidence.html">Model-confidence essay</a></li></ul></div>
+<div class="cohere-nav-group"><p>Strategy</p><ul><li><a href="strategy.html">Six-week content plan</a></li>
+<li><a href="editorial-strategy-exercise.html">Prioritization and measurement</a></li></ul></div>
+</nav>
+</aside>
+<div class="cohere-main" id="cohere-content" tabindex="-1"><div class="subhero"><div class="wrap">
+<p class="eyebrow">Cohere editorial case study</p>
 <h1>Source audit and planning brief</h1><p class="lede">I read across channels to see how a product claim changes as readers go from understanding it to testing it.</p></div></div>
 <article class="wrap article">
 <section class="cohere-context" aria-labelledby="cohere-page-context">
 <h2 id="cohere-page-context">How I decide what to publish</h2>
 <p>Cohere makes AI tools for organizations. Its launch posts explain what a new feature could do for a business. Its technical docs explain how it works and where it is available. I compare those sources to find the next question a buyer or developer still needs answered.</p>
 <p><a href="editorial.html#cohere-basics">Start with the Cohere overview and journey map</a></p>
-</section><nav class="ed-nav" aria-label="Cohere editorial case study">
-<a href="editorial.html">Process</a><a href="editorial-audit.html">Source audit</a>
-<a href="style-guide.html">Mini style guide</a><a href="editorial-glossary.html">Glossary</a>
-<a href="editorial-edit.html">Worked edit</a></nav>
+</section>
 <h2>How I gathered and coded the material</h2>
 <ol><li><strong>Select across jobs.</strong> I chose one developer launch, one deployment announcement, and one research explainer. I paired product articles with the relevant docs and kept public discussions in a separate field.</li>
 <li><strong>Capture the same fields for each item.</strong> Record title and URL, date, channel, audience, the reader’s decision, opener, main claim, evidence, qualifiers, and next step. Code each item as a promise, mechanism, measurement, or availability claim.</li>
@@ -34,7 +56,7 @@
 <dt>Review</dt><dd>DevRel checks behavior and example. Product Marketing checks naming and benefit. The editor verifies claim scope and leads structure before line editing.</dd>
 <dt>Measure after launch</dt><dd>Look for guide-to-doc click-through and repeated setup or interpretation questions. Use a task check with developers to see if they can choose a path and explain the fallback.</dd></dl></div>
 <p><a href="editorial-edit.html">See how I edited that brief into copy</a></p>
-<section class="sources"><h2>Sources</h2><ul><li><a href="https://docs.cohere.com/docs/rerank">Rerank docs</a></li><li><a href="https://docs.cohere.com/v2/docs/model-vault/regions">Model Vault regional documentation</a></li><li><a href="https://cohere.com/blog/rethinking-confidence-in-reasoning-models">CALIBER research explainer</a></li></ul></section></article></main><footer class="footer"><div class="wrap">
+<section class="sources"><h2>Sources</h2><ul><li><a href="https://docs.cohere.com/docs/rerank">Rerank docs</a></li><li><a href="https://docs.cohere.com/v2/docs/model-vault/regions">Model Vault regional documentation</a></li><li><a href="https://cohere.com/blog/rethinking-confidence-in-reasoning-models">CALIBER research explainer</a></li></ul></section></article></div></div></main><footer class="footer"><div class="wrap">
 <span>Sara Elsharawy · Product content design</span>
 <div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
 <a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>
