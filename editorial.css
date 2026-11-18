@@ -86,3 +86,18 @@
 .topic-key dd{margin:0;color:var(--muted)}
 .toolset>h2{margin:0;font-size:1.15rem;letter-spacing:-.025em}
 @media(max-width:540px){.topic-key{grid-template-columns:1fr}}
+
+/* Progressive disclosure for the independent Cohere editorial strategy. */
+.strategy-method{margin:1.5rem 0 2.1rem;scroll-margin-top:1.5rem}
+.strategy-method>h2{margin-bottom:.65rem}
+.strategy-method>p{max-width:78ch}
+.strategy-steps{list-style:none;padding:0;display:grid;gap:.8rem;counter-reset:none}
+.strategy-steps>li{padding:1.05rem 1.15rem;border:1px solid var(--line);border-radius:8px;background:var(--quiet)}
+.strategy-steps h3{font-size:1.06rem;margin:0 0 .5rem}
+.strategy-steps p{margin:.35rem 0 .55rem;line-height:1.58}
+.strategy-steps p:last-child{margin-bottom:0;font-size:.89rem}
+.strategy-decision-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:1rem 0}
+.strategy-decision-grid>section{padding:1rem;border:1px solid var(--line);border-radius:8px;background:var(--quiet)}
+.strategy-decision-grid h3{margin:0 0 .45rem;font-size:1rem}
+.strategy-decision-grid p{margin:0;font-size:.91rem}
+@media(max-width:680px){.strategy-decision-grid{grid-template-columns:1fr}}
