@@ -73,3 +73,17 @@ h1,h2,h3{font-family:var(--sans);font-weight:500;letter-spacing:-.047em}h1{font-
 .cohere-logo{max-width:160px;height:37px}
 .cohere-hero-logo{height:44px;max-width:185px;margin-bottom:1rem}
 .cohere-aspiration{font-weight:650;color:var(--ink);font-size:1rem;line-height:1.5;margin:.5rem 0 .7rem}
+
+/* Compact, keyboard-accessible project directories on Selected Work. */
+.work-index-intro{color:var(--muted);font-size:.94rem;margin:.35rem 0 1.25rem}
+.work-accordion{border:1px solid var(--line);border-radius:9px;margin:0 0 .7rem;overflow:hidden;background:var(--quiet)}
+.work-accordion>summary{display:flex;justify-content:space-between;align-items:center;gap:.85rem;padding:1rem 1.15rem;cursor:pointer;list-style:none;font-size:clamp(1rem,1.75vw,1.2rem);font-weight:650;line-height:1.4}
+.work-accordion>summary::-webkit-details-marker{display:none}
+.work-accordion>summary:focus-visible{outline:2px solid var(--accent);outline-offset:-3px}
+.work-accordion>summary small{font-size:.76rem;font-weight:500;color:var(--muted);white-space:nowrap;margin-left:auto}
+.work-accordion>summary:after{content:"";width:.5rem;height:.5rem;flex:none;margin:.0rem .2rem .25rem .25rem;border:solid var(--accent);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.work-accordion[open]>summary:after{transform:rotate(225deg);margin-top:.4rem;margin-bottom:0}
+.work-accordion[open]>summary{border-bottom:1px solid var(--line)}
+.work-accordion-body{padding:0 1.1rem .6rem}
+.work-accordion-body .worklist{margin:0}
+@media(max-width:560px){.work-accordion>summary{padding:.85rem}.work-accordion-body{padding:0 .85rem .45rem}.work-accordion>summary small{font-size:.7rem}}
