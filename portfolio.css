@@ -64,3 +64,12 @@ h1,h2,h3{font-family:var(--sans);font-weight:500;letter-spacing:-.047em}h1{font-
 .portfolio-answer ul{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin:0;padding:0;list-style:none;font-size:.88rem}
 .portfolio-answer a{color:var(--accent);text-underline-offset:.18em}
 @media(max-width:700px){.portfolio-questions{grid-template-columns:1fr}}
+
+/* Brand marks in experience cards and independent Cohere editorial work. */
+.company-logo{display:block;width:auto;max-width:min(100%,170px);height:34px;object-fit:contain;object-position:left center;margin:0 0 .65rem}
+.home-experience .company-logo{height:32px;max-width:155px}
+.home-experience .ibm-logo{height:38px;max-width:92px}
+.home-experience .marqeta-logo{max-width:160px}
+.cohere-logo{max-width:160px;height:37px}
+.cohere-hero-logo{height:44px;max-width:185px;margin-bottom:1rem}
+.cohere-aspiration{font-weight:650;color:var(--ink);font-size:1rem;line-height:1.5;margin:.5rem 0 .7rem}
