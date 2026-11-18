@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Developer experience and documentation strategy | Sara Elsharawy</title><meta name="description" content="A developer experience strategy for API onboarding, integration, migration, and task-based documentation quality.">
+<meta name="robots" content="noindex"><meta name="theme-color" content="#fbf9f4"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="portfolio.css"><link rel="stylesheet" href="editorial.css?v=topic-structure"><script src="theme.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top">
+<a class="brand" href="index.html">Sara Elsharawy</a>
+<nav aria-label="Main navigation"><a href="work.html">Work</a><a href="skills.html">Skills</a><a href="tools.html">Tools</a><a href="journey.html">Journey</a><a href="editorial.html">Cohere Editorial</a></nav></div></header>
+<main id="main">
+<div class="subhero"><div class="wrap"><a class="back" href="skills.html">Back to skills</a><p class="eyebrow">Capability · Developer experience (DX)</p><h1>Designing the path from API discovery to successful integration</h1><p class="lede">Developer experience is more than writing an API reference. It is making the journey from “Can this solve my problem?” to “I have a working, supportable integration” clear, verifiable, and maintainable.</p></div></div>
+<article class="wrap article">
+<section aria-labelledby="dx-foundation"><h2 id="dx-foundation">What developer experience means in my work</h2>
+<p>I combine technical writing, information architecture, content design, and editorial governance to help developers understand a platform, choose an integration path, complete a task, and recover when something fails. The documentation is part of the product interface: it exposes requirements, behavior, dependencies, and supported decisions.</p>
+<p>At <a href="marqeta.html">Marqeta</a>, I led developer content strategy for a unified payments API, mapped services and developer journeys, audited migration gaps, developed terminology, and peer-reviewed documentation. At <a href="ibm-docs.html">IBM</a>, I documented enterprise AI software workflows across installation, upgrades, model evaluation, known issues, and troubleshooting, validating technical behavior with engineering partners.</p>
+<p>Those are professional case studies. The <a href="editorial.html">Cohere editorial portfolio</a> is a separate, independent, public-source exercise that demonstrates how I would connect developer education with editorial strategy.</p></section>
+<section aria-labelledby="dx-journey"><h2 id="dx-journey">The developer journey I design for</h2><p>Instead of treating every documentation page as an isolated deliverable, I map the decisions and evidence that connect them.</p>
+<figure class="work-diagram blue"><figcaption>From first question to a working implementation</figcaption><ol class="diagram-nodes">
+<li><strong>Discover</strong><span>Which use case does the API support? Find the capability, eligibility, constraints, and the right entry point.</span></li>
+<li><strong>Evaluate</strong><span>Compare alternatives using documented prerequisites, meaningful examples, expected behavior, and known limitations.</span></li>
+<li><strong>Get started</strong><span>Find credentials, SDK or REST setup, a minimal working request, and a recognizable successful result.</span></li>
+<li><strong>Build and validate</strong><span>Follow task-based guides, reference the schema, inspect outputs, and test edge cases and errors.</span></li>
+<li><strong>Ship and operate</strong><span>Understand production-readiness, permissions, reliability requirements, troubleshooting, release notes, and support paths.</span></li>
+<li><strong>Migrate and maintain</strong><span>Identify breaking changes, version-specific behavior, deprecations, mapping from previous APIs, and verification before rollout.</span></li>
+</ol><p>This is a reusable planning model, not a claim that every project has had each stage implemented or measured.</p></figure></section>
+<section aria-labelledby="dx-system"><h2 id="dx-system">How I turn that journey into a documentation system</h2><div class="scroller" tabindex="0" role="region" aria-label="Developer documentation strategy matrix"><table><thead><tr><th scope="col">Developer question</th><th scope="col">Best content surface</th><th scope="col">Evidence and quality check</th></tr></thead><tbody>
+<tr><th scope="row">Does this fit my architecture?</th><td>Overview, integration decision guide, architecture or service map</td><td>Supported use cases, prerequisites, security and deployment constraints</td></tr>
+<tr><th scope="row">How do I make the first successful call?</th><td>Quickstart and runnable example</td><td>API version, credential setup, request, expected response, reproducible test</td></tr>
+<tr><th scope="row">What do these fields mean?</th><td>Versioned API or SDK reference</td><td>Types, defaults, optionality, errors, authoritative schema</td></tr>
+<tr><th scope="row">Why did this request fail?</th><td>Troubleshooting and error reference</td><td>Observable symptom, likely cause, resolution, escalation</td></tr>
+<tr><th scope="row">What changes when I upgrade?</th><td>Migration guide and release notes</td><td>Before/after behavior, deprecations, compatibility and verification steps</td></tr>
+</tbody></table></div>
+<p>A good journey connects these surfaces without duplicating the reference in every guide. It also gives each page a clear maintenance owner and a trigger for review when the product changes.</p></section>
+<section aria-labelledby="dx-review"><h2 id="dx-review">How I audit developer content</h2><ol>
+<li><strong>Reconstruct the task:</strong> Define who is integrating, their starting state, dependencies, expected result, and likely failure points.</li>
+<li><strong>Check the source of truth:</strong> Compare the guide against API or SDK documentation, product specifications, release information, and engineer-reviewed behavior.</li>
+<li><strong>Walk the happy path and recovery path:</strong> Confirm that a developer can identify the setup, perform or reproduce the steps, recognize success, and respond to failure. Mark untested examples rather than presenting them as verified.</li>
+<li><strong>Check the handoffs:</strong> Follow links from launch to quickstart, task guide, API reference, troubleshooting, and migration details. Resolve conflicting terms.</li>
+<li><strong>Separate content gaps from product gaps:</strong> A missing explanation may require a rewrite; a blocked request may require engineering or access changes.</li>
+<li><strong>Record decisions and revalidation triggers:</strong> Track affected pages, the reviewer, evidence source, change event, and unresolved risk.</li>
+</ol><p><a href="marqeta.html#migration">See my migration documentation audit</a> · <a href="ibm-docs.html">See enterprise AI documentation work</a></p></section>
+<section aria-labelledby="dx-cohere"><h2 id="dx-cohere">How developer experience strengthens my Cohere editorial strategy</h2><p>For a product announcement, I ask what a developer must be able to evaluate after reading it. I would connect the launch narrative to a working example, a fair comparison, authoritative API reference, and fallback or limitation guidance. That makes developer education a complement to product storytelling rather than an unrelated documentation stream.</p><p>My independent <a href="rerank.html">Rerank comparison guide</a> explores the reader’s decision. The <a href="editorial-strategy-exercise.html">simulated commissioning exercise</a> shows when a guide might be more useful than another announcement. These are editorial artifacts, not a claim that I ran Cohere integrations, tested their SDKs, or measured adoption inside Cohere.</p><p>For a production-ready developer sample I would add a separately versioned, technically verified example with explicit credentials, a request and expected response, error behavior, and a documented validation environment. I would seek Engineering or DevRel review before presenting the sample as tested.</p></section>
+<section aria-labelledby="dx-measure"><h2 id="dx-measure">How I would measure developer content quality</h2><p>Useful measures go beyond page views. I would define a reader task and a denominator before claiming a result.</p><ul>
+<li><strong>Time to first successful request:</strong> Time from beginning setup to a verified API response, measured with representative developers and controlled prerequisites.</li>
+<li><strong>Evaluation completion:</strong> Eligible developers who finish the intended comparison divided by those who started, with documented event definitions.</li>
+<li><strong>Error recovery:</strong> Whether someone can diagnose and resolve a representative failure using the guide, without undocumented assistance.</li>
+<li><strong>Migration task success:</strong> Whether developers identify changes, verify compatibility, and complete a rehearsal before deploying.</li>
+<li><strong>Documentation reliability:</strong> Broken links, stale references, example-test failures, and age of unresolved doc issues, with severity and owner.</li>
+</ul><p>These are proposed methods. No quantitative outcomes are attributed to my employer projects or to Cohere without supporting evidence.</p><p><a href="reader-impact.html">Read the broader reader-impact framework</a></p></section>
+<section class="topic-takeaway" aria-labelledby="dx-takeaway"><h2 id="dx-takeaway">The principle</h2><p>The best developer content does not just explain how a system works. It helps someone decide, build, verify, and maintain something that works.</p><p><a href="skills.html">Explore my other capabilities</a> · <a href="editorial.html">See the Cohere editorial strategy</a></p></section>
+</article></main><footer class="footer"><div class="wrap">
+<span>Sara Elsharawy · Product content design</span>
+<div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
+<a href="https://www.linkedin.com/in/saraelsharawy/">LinkedIn</a>
+<a href="themes.html">Theme options</a></div></div></footer></body></html>
