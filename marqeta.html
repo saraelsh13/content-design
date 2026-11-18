@@ -9,25 +9,61 @@
 <a class="back" href="work.html">Back to Selected work</a><p class="eyebrow">Case study · Marqeta</p>
 <h1>Making a unified API easier to adopt</h1><p class="lede">I organized the unified payments API guidance around integration decisions, including what developers need to test before migrating.</p></div></div>
 <article class="wrap article">
-<h2>Where does integration actually begin?</h2>
-<p>For a team starting from scratch, the first question might be which services it needs. A team moving from a legacy API has a different question. Which parts of our integration have to change, and what can we keep?</p>
-<p>I led the developer content strategy for this part of the platform. I mapped systems, services, and developer journeys, and audited existing integrations to find where migration guidance was needed. I worked with Marketing on product content, developed glossaries, and peer-reviewed other writers’ drafts.</p>
-<h2 id="architecture">Design around the next decision</h2>
-
-<figure class="work-diagram mint"><figcaption>Developer journey</figcaption>
-<ol class="diagram-nodes"><li><strong>Understand the service</strong><span>Work out which capabilities the integration needs.</span></li><li><strong>Plan the integration</strong><span>Locate the service guides, prerequisites, and dependencies.</span></li><li><strong>Build and validate</strong><span>Follow the integration guide and check field-level details in the reference.</span></li><li><strong>Move from the legacy API</strong><span>Use the migration guidance to identify what changes and what carries over.</span></li></ol>
-<p>A simplified map of the developer questions that shaped the documentation.</p>
-</figure>
-<p>I used the journey to decide what documentation to put together and where the reader needed a link out. A migration guide can start with what changes. An API reference can carry field-level details. The integration guide can explain the order in which the pieces come together.</p>
-<div class="sample-panel"><p class="byline">Illustrative audit questions</p><h3>Can a developer make the move from here?</h3><ul><li>Can they locate the replacement guidance for a legacy workflow?</li><li>Can they tell what they need to change, verify, or leave as is?</li><li>Do the guide, reference, and glossary use the same terms?</li></ul></div>
-<h2 id="migration">What the migration audit changed about the plan</h2>
-<p>I started with existing customer integrations and mapped the tasks a developer would need to revisit. That gave me a way to organize the migration guidance by what customers had to change, verify, or carry over. It also let me separate decisions that belong in a migration guide from details that belong in the API reference.</p>
-<p>I built reusable content-audit skills to help surface gaps in developer guidance. I use an audit to find candidates for review, then check each gap against the workflow and product source before deciding what to rewrite.</p>
-<h2>Help writers make the same call across surfaces</h2>
-<p>I developed product glossaries, worked with Marketing on product language, and reviewed other writers’ drafts. Across those surfaces, I look for the same thing: can readers tell when two terms refer to the same capability and when the distinction affects their integration?</p>
-<p><a href="incident.html">See how I approach customer incident reporting</a></p>
-
-<section class="topic-takeaway" aria-labelledby="page-takeaway"><h2 id="page-takeaway">Help developers plan the move</h2><p>Make the changes, dependencies, and verification steps easy to find before a team commits to a rollout.</p><p><a href="editorial-peer-review.html">See the related editing exercise</a></p></section>
+<section aria-labelledby="case-summary"><h2 id="case-summary">From product architecture to a developer adoption journey</h2>
+<p><strong>The problem:</strong> A unified payments API can simplify a platform’s service model while creating a new learning task for developers. A new integrator needs to identify capabilities and prerequisites. An existing integrator needs to understand which legacy behaviors, dependencies, and implementation decisions change.</p>
+<p><strong>My responsibility:</strong> As Senior Information Developer, I led developer content strategy for this area of Marqeta’s commercial payments, banking, and money movement platform. I mapped systems and services, organized developer journeys, audited documentation gaps for legacy customers, developed shared product terminology, collaborated with Marketing, and peer-reviewed technical content.</p>
+<p><strong>The strategic question:</strong> How do we make it easier for developers to choose an integration path, understand what changes, and find the authoritative details needed to validate their implementation?</p>
+<p class="note">This case describes my professional work at the level I can share publicly. The journey and decision tables below are simplified reconstructions, not customer-specific architecture diagrams or performance findings. No confidential code, specifications, or customer data are reproduced.</p></section>
+<section id="case-approach" aria-labelledby="approach-title"><h2 id="approach-title">1. Diagnose the documentation problem</h2>
+<p>I began with the work a developer must complete, rather than the product’s internal organization. A greenfield implementation and a migration have different starting points, dependencies, and definitions of success. I mapped the services involved and used existing integration patterns to identify where documentation had to guide readers through a change.</p>
+<div class="sample-panel"><h3>Audit questions I used to guide the work</h3><ul>
+<li>Can a developer identify the service or combination of services that fits the intended payment workflow?</li>
+<li>Which prerequisites and dependencies must be resolved before a test or migration?</li>
+<li>What must an existing integrator <strong>change, verify, or retain</strong>?</li>
+<li>Where should readers find implementation steps, field-level details, and troubleshooting information?</li>
+<li>Are the same concepts named consistently in product messaging, guides, and reference content?</li>
+</ul></div>
+<p>The audit distinguished missing or unclear guidance from questions that needed confirmation against the underlying workflow or product source. I developed reusable content-audit skills to surface possible gaps, then used editorial review rather than treating automated findings as authoritative.</p></section>
+<section id="architecture" aria-labelledby="architecture-title"><h2 id="architecture-title">2. Design the journey around developer decisions</h2>
+<figure class="work-diagram mint"><figcaption>How I structure developer guidance from discovery to migration</figcaption>
+<ol class="diagram-nodes">
+<li><strong>Understand the capability</strong><span>Identify the payment service and relevant use case.</span></li>
+<li><strong>Plan the integration</strong><span>Find prerequisites, related services, and dependencies.</span></li>
+<li><strong>Build and validate</strong><span>Follow task guidance and confirm implementation details in the API reference.</span></li>
+<li><strong>Plan the migration</strong><span>Distinguish what changes, what must be tested, and what can remain in place.</span></li>
+</ol><p>A simplified journey based on the content planning decisions, not an actual production integration trace.</p></figure>
+<p>The goal was a connected information architecture. The migration guide would lead with developer-facing differences; an integration guide would explain the sequence of work; and the API reference would remain the source for detailed fields and operations. This reduces duplication and gives each topic a clear job.</p>
+<div class="scroller" tabindex="0" role="region" aria-label="Developer documentation decisions"><table><thead><tr><th scope="col">Developer need</th><th scope="col">Content decision</th><th scope="col">What must be checked</th></tr></thead><tbody>
+<tr><th scope="row">Which services do I need?</th><td>Capability overview and integration entry points</td><td>Supported scenarios and prerequisites</td></tr>
+<tr><th scope="row">How do I put them together?</th><td>Task-oriented integration guidance</td><td>Dependencies, correct sequence, expected outcomes</td></tr>
+<tr><th scope="row">What does an operation accept or return?</th><td>Authoritative API reference</td><td>Version, schema, definitions, and constraints</td></tr>
+<tr><th scope="row">What changes for an existing customer?</th><td>Migration guidance organized by developer action</td><td>Changed behavior, retained behavior, and verification steps</td></tr>
+</tbody></table></div></section>
+<section id="migration" aria-labelledby="migration-title"><h2 id="migration-title">3. Turn the migration audit into content priorities</h2>
+<p>I reviewed existing customer integration paths against the unified service model. That let me organize guidance around the tasks developers would revisit rather than writing one undifferentiated description of the new API.</p>
+<div class="scroller" tabindex="0" role="region" aria-label="Before and after content architecture comparison"><table><thead><tr><th scope="col">Less useful content approach</th><th scope="col">Approach I designed</th><th scope="col">Why it helps</th></tr></thead><tbody>
+<tr><td>Explain the unified API only in product or service terms.</td><td>Start with the developer’s integration or migration decision.</td><td>Connects the platform story to the actual work ahead.</td></tr>
+<tr><td>Scatter the migration question across service descriptions.</td><td>Group changes, validation, and retained behavior in migration guidance.</td><td>Lets existing customers plan a transition without reconstructing it from reference topics.</td></tr>
+<tr><td>Repeat field details in every conceptual explanation.</td><td>Link task guidance to authoritative reference details.</td><td>Clarifies ownership and makes version-specific information easier to maintain.</td></tr>
+<tr><td>Allow different teams to describe the same capability differently.</td><td>Use shared terminology and peer review across product and technical content.</td><td>Reduces ambiguity between product storytelling and implementation guidance.</td></tr>
+</tbody></table></div>
+<p><strong>Reading this comparison:</strong> These are the content-design choices and anti-patterns addressed by the work, not a measured before-and-after experiment or a claim that every previous Marqeta page had these problems.</p></section>
+<section id="editorial-collaboration" aria-labelledby="collaboration-title"><h2 id="collaboration-title">4. Carry editorial consistency across teams</h2>
+<p>The content strategy extended beyond individual documentation pages. I collaborated with Marketing on product language, developed product glossaries, and peer-reviewed fellow writers’ drafts. That helped connect how a capability is introduced to how a developer is expected to implement it.</p>
+<p><strong>Editorial decisions:</strong> Keep product names stable, distinguish similar concepts when the difference matters to an integration, link claims to current technical sources, and make migration requirements visible where developers will look for them.</p>
+<p><strong>Technical verification:</strong> A publishable guide needs product and engineering confirmation for behavior, prerequisites, schema, and version-specific details. The exact review and sign-off path is not documented in this public case study, so I do not present a fictional approval chain as an established Marqeta process.</p>
+<p><a href="editorial-peer-review.html">See an explicitly simulated API-migration peer-review exercise</a> · <a href="incident.html">See customer-facing incident reporting</a></p></section>
+<section id="outcomes" aria-labelledby="outcomes-title"><h2 id="outcomes-title">5. What the work produced, and how I would demonstrate impact</h2>
+<p><strong>Documented contributions:</strong> The work produced an integration-focused content structure, a task-based approach to migration guidance, reusable gap-audit skills, shared terminology, and cross-functional editorial review. These are outputs of the work described here, not independently measured adoption results.</p>
+<p><strong>Evidence I would use to validate effectiveness:</strong> With approved access to actual data, I would measure whether developers can locate the migration path, accurately identify required changes, complete a test integration, and resolve common errors. I would compare task completion and support friction with a suitable baseline, segmenting new adopters from migrating customers and checking for product or access changes that could explain the difference.</p>
+<div class="scroller" tabindex="0" role="region" aria-label="Proposed developer adoption measures"><table><thead><tr><th scope="col">Question</th><th scope="col">Proposed measure</th><th scope="col">Important qualification</th></tr></thead><tbody>
+<tr><th scope="row">Can developers find the correct starting point?</th><td>First-choice navigation success and time to correct guide</td><td>Use representative developer tasks and record failed paths</td></tr>
+<tr><th scope="row">Can existing customers plan a safe move?</th><td>Migration checklist accuracy and task completion</td><td>Compare with approved product requirements, not impressions alone</td></tr>
+<tr><th scope="row">Can developers build and troubleshoot?</th><td>Time to first successful test, error-recovery completion</td><td>Control for credentials, sandbox availability, and API reliability</td></tr>
+<tr><th scope="row">Does the content stay reliable?</th><td>Stale-link and documentation defect rates, with review age</td><td>Distinguish documentation defects from product bugs</td></tr>
+</tbody></table></div>
+<p>No adoption uplift, time reduction, or support-volume improvement is claimed here without a verified measurement. The next stronger artifact would be an approved redacted audit sample or a documented developer usability test with observable results.</p></section>
+<section class="topic-takeaway" aria-labelledby="page-takeaway"><h2 id="page-takeaway">The contribution</h2><p>I turned a complex API service model into a clearer set of developer decisions, connecting integration and migration guidance, reference content, terminology, and editorial review.</p><p><a href="developer-experience.html">Explore my developer experience strategy</a> · <a href="editorial.html#developer-strategy">See how I apply the same principles to Cohere editorial work</a></p></section>
 </article></main><footer class="footer"><div class="wrap">
 <span>Sara Elsharawy · Product content design</span>
 <div class="footlinks"><a href="mailto:saraelsh13@gmail.com">Email</a>
